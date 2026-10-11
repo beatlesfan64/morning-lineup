@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Morning Lineup</title>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Lineup">
+<meta name="theme-color" content="#14213a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a broadcast rundown sheet. One column, running order down the page, transport bar pinned to the bottom. */
+:root {
+  --paper: #edf1f5;
+  --sheet: #f9fbfc;
+  --ink: #14213a;
+  --muted: #5b6880;
+  --rule: #cdd6e0;
+  --signal: #b56a00;      /* on-air amber, text-safe on paper */
+  --signal-fill: #f2a900; /* amber as a fill */
+  --on-signal: #14213a;
+  --bad: #b3261e;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0d1526;
+    --sheet: #152038;
+    --ink: #e6ecf5;
+    --muted: #93a1b8;
+    --rule: #2a3855;
+    --signal: #f2b632;
+    --signal-fill: #f2a900;
+    --on-signal: #14213a;
+    --bad: #ff8a80;
+    color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 16px/1.5 var(--body);
+  padding-inline: 16px;
+  padding-block: 28px 190px;
+}
+.wrap { max-width: 720px; margin-inline: auto; display: flex; flex-direction: column; gap: 22px; }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+[hidden] { display: none !important; }
+
+/* Masthead */
+.mast { display: flex; flex-direction: column; gap: 6px; }
+.dateline { font: 500 12px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font: 700 clamp(34px, 8vw, 52px)/1 var(--display); letter-spacing: -.02em; margin: 0; text-wrap: balance; }
+.runtime { font: 400 15px/1.4 var(--body); color: var(--muted); min-height: 1.4em; }
+.runtime b { color: var(--ink); font-weight: 600; }
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.btn {
+  border: 1px solid var(--rule); background: var(--sheet); border-radius: 999px;
+  padding: 9px 16px; font-weight: 500; font-size: 14px; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn:hover { border-color: var(--muted); }
+.btn.primary { background: var(--signal-fill); border-color: var(--signal-fill); color: var(--on-signal); font-weight: 600; font-size: 16px; padding: 12px 22px; }
+.btn.primary:hover { filter: brightness(1.06); }
+.btn:disabled { opacity: .5; cursor: default; }
+.btn svg { width: 16px; height: 16px; fill: currentColor; flex: none; }
+.spacer { flex: 1; }
+.agepick { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.agepick select { border: 1px solid var(--rule); background: var(--sheet); border-radius: 8px; padding: 6px 8px; font-size: 13px; }
+
+/* Rundown */
+.rundown { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--ink); }
+.row { border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; column-gap: 12px; padding: 16px 0; align-items: start; }
+.row .slot { font: 500 13px/1.6 var(--mono); color: var(--muted); padding-top: 2px; }
+.row .main { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.row .src { font: 500 12px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: center; }
+.row .ttl { font: 500 19px/1.25 var(--display); margin: 0; overflow-wrap: anywhere; }
+.row .sum { font-size: 14px; color: var(--muted); margin: 0; overflow-wrap: anywhere; }
+.row .meta { font: 400 13px/1.6 var(--mono); color: var(--muted); text-align: right; white-space: nowrap; padding-top: 2px; }
+.tag { font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; padding: 4px 7px; border-radius: 4px; border: 1px solid var(--rule); color: var(--muted); }
+.tag.air { background: var(--signal-fill); border-color: var(--signal-fill); color: var(--on-signal); }
+.tag.err { color: var(--bad); border-color: currentColor; }
+.row.out .ttl, .row.out .sum { opacity: .55; }
+.row.playing .slot { color: var(--signal); }
+.playrow { border: 0; background: none; padding: 0; text-align: left; display: block; width: 100%; }
+.playrow:hover .ttl { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.stories { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.stories button { border: 0; background: none; padding: 4px 0; text-align: left; display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 8px; width: 100%; font-size: 14px; }
+.stories button:hover span:last-child { text-decoration: underline; text-underline-offset: 3px; }
+.stories .t { font: 400 13px/1.6 var(--mono); color: var(--signal); }
+.stories .now span:last-child { font-weight: 600; }
+.skel { height: 14px; width: 60%; border-radius: 4px; background: var(--rule); animation: pulse 1.2s ease-in-out infinite alternate; }
+@keyframes pulse { from { opacity: .45 } to { opacity: 1 } }
+@media (prefers-reduced-motion: reduce) { .skel { animation: none; } }
+
+/* Sources editor */
+.panel { background: var(--sheet); border: 1px solid var(--rule); border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.panel h2 { font: 700 20px/1.2 var(--display); margin: 0; }
+.panel p { margin: 0; font-size: 14px; color: var(--muted); }
+.srclist { list-style: none; margin: 0; padding: 0; }
+.srclist li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 8px 0; border-top: 1px solid var(--rule); }
+.srclist li:first-child { border-top: 0; }
+.srclist label { display: flex; flex-direction: column; min-width: 0; }
+.srclist small { color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.srclist input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--signal-fill); }
+.mini { border: 1px solid var(--rule); background: transparent; border-radius: 6px; width: 32px; height: 32px; display: inline-grid; place-items: center; }
+.mini:hover { border-color: var(--muted); }
+.mini:disabled { opacity: .3; cursor: default; }
+.mini svg { width: 14px; height: 14px; fill: currentColor; }
+.tools { display: flex; gap: 4px; }
+.addfeed { display: flex; flex-wrap: wrap; gap: 8px; }
+.addfeed input { flex: 1 1 240px; min-width: 0; border: 1px solid var(--rule); background: var(--paper); border-radius: 8px; padding: 9px 12px; font-size: 14px; }
+.note { font-size: 13px; color: var(--muted); min-height: 1.3em; }
+.note.err { color: var(--bad); }
+
+/* Transport */
+.deck {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  background: var(--ink); color: var(--paper);
+  padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+}
+.deck .in { max-width: 720px; margin-inline: auto; display: flex; flex-direction: column; gap: 8px; }
+.now { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
+.now .who { font: 500 11px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--signal-fill); flex: none; }
+.now .what { font: 500 15px/1.3 var(--display); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.scrub { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: center; font: 400 12px/1 var(--mono); font-variant-numeric: tabular-nums; }
+.scrub input { width: 100%; accent-color: var(--signal-fill); height: 20px; }
+.keys { display: flex; align-items: center; justify-content: center; gap: 6px; }
+.key { border: 0; background: transparent; color: inherit; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; font: 500 11px/1 var(--mono); }
+.key:hover { background: color-mix(in srgb, var(--paper) 14%, transparent); }
+.key svg { width: 22px; height: 22px; fill: currentColor; }
+.key.big { width: 54px; height: 54px; background: var(--signal-fill); color: var(--on-signal); }
+.key.big:hover { background: var(--signal-fill); filter: brightness(1.08); }
+.key.big svg { width: 26px; height: 26px; }
+.key.rate { width: 54px; border-radius: 22px; font-size: 13px; }
+.deck :focus-visible { outline-color: var(--signal-fill); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="mast">
+    <div class="dateline" id="dateline"></div>
+    <h1>Morning Lineup</h1>
+    <div class="runtime" id="runtime" aria-live="polite">Checking your sources for this morning's episodes…</div>
+  </header>
+
+  <div class="actions">
+    <button class="btn primary" id="playAll" disabled>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg><span id="playAllLabel">Play lineup</span>
+    </button>
+    <button class="btn" id="refresh">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5a7 7 0 1 1-6.6 4.7l-1.9-.7A9 9 0 1 0 12 3V0L7.5 4 12 8z"/></svg>Refresh
+    </button>
+    <button class="btn" id="editBtn" aria-expanded="false" aria-controls="editor">Sources</button>
+    <span class="spacer"></span>
+    <label class="agepick" for="maxAge">Include episodes from
+      <select id="maxAge">
+        <option value="24">the last 24 hours</option>
+        <option value="48">the last 2 days</option>
+        <option value="96">the last 4 days</option>
+        <option value="0">any time</option>
+      </select>
+    </label>
+  </div>
+
+  <section class="panel" id="editor" hidden>
+    <h2>Sources</h2>
+    <p>Tick the shows you want and use the arrows to set the running order. Paste any podcast RSS address to add your own.</p>
+    <ul class="srclist" id="srclist"></ul>
+    <form class="addfeed" id="addForm">
+      <input id="feedUrl" type="url" inputmode="url" placeholder="https://example.com/podcast/feed.xml" aria-label="Podcast RSS address" required>
+      <button class="btn" type="submit" id="addBtn">Add show</button>
+    </form>
+    <div class="note" id="addNote" aria-live="polite"></div>
+  </section>
+
+  <ol class="rundown" id="rundown" aria-label="This morning's running order"></ol>
+</div>
+
+<div class="deck" role="region" aria-label="Player">
+  <div class="in">
+    <div class="now"><span class="who" id="who">Standing by</span><span class="what" id="what">Press Play lineup to start</span></div>
+    <div class="scrub">
+      <span id="cur">0:00</span>
+      <input id="seek" type="range" min="0" max="1000" value="0" step="1" aria-label="Position in episode" disabled>
+      <span id="rem">0:00</span>
+    </div>
+    <div class="keys">
+      <button class="key rate" id="rate" title="Playback speed" aria-label="Playback speed">1×</button>
+      <button class="key" id="prev" title="Previous" aria-label="Previous story or show"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></button>
+      <button class="key" id="back" title="Back 15 seconds" aria-label="Back 15 seconds">−15</button>
+      <button class="key big" id="toggle" title="Play or pause" aria-label="Play"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="toggleIcon" d="M7 4.5v15l13-7.5z"/></svg></button>
+      <button class="key" id="fwd" title="Forward 30 seconds" aria-label="Forward 30 seconds">+30</button>
+      <button class="key" id="next" title="Next" aria-label="Next story or show"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></button>
+    </div>
+  </div>
+</div>
+<audio id="audio" preload="none"></audio>
+
+<script>
+"use strict";
+/* ---------- Sources ---------- */
+const DEFAULT_SOURCES = [
+  { id: "npr-now",    name: "NPR News Now",              url: "https://feeds.npr.org/500005/podcast.xml", on: true },
+  { id: "nyt-head",   name: "The Headlines (NYT)",       url: "https://feeds.simplecast.com/ydACIPHO", on: true },
+  { id: "cnn-5",      name: "CNN 5 Things",              url: "https://feeds.megaphone.fm/WMHY2007701094", on: true },
+  { id: "fox-hour",   name: "Fox News Hourly Update",    url: "https://feeds.megaphone.fm/FOXM2252206613", on: true },
+  { id: "mkt-am",     name: "Marketplace Morning Report", url: "https://feeds.publicradio.org/public_feeds/marketplace-morning-report", on: true },
+  { id: "ft-brief",   name: "FT News Briefing",          url: "https://feeds.acast.com/public/shows/ftnewsbriefing", on: true },
+  { id: "up-first",   name: "Up First (NPR)",            url: "https://feeds.npr.org/510318/podcast.xml", on: true },
+  { id: "indicator",  name: "The Indicator",             url: "https://feeds.npr.org/510325/podcast.xml", on: false },
+  { id: "today-exp",  name: "Today, Explained",          url: "https://feeds.megaphone.fm/VMP5705694065", on: false },
+  { id: "fox-run",    name: "The Fox News Rundown",      url: "https://feeds.megaphone.fm/FOXM1880458659", on: false }
+];
+/* Feeds that do not allow direct reads from a web page are fetched through one of these public relays. */
+const RELAYS = [
+  u => "https://api.allorigins.win/raw?url=" + encodeURIComponent(u),
+  u => "https://corsproxy.io/?url=" + encodeURIComponent(u),
+  u => "https://api.codetabs.com/v1/proxy/?quest=" + encodeURIComponent(u)
+];
+const RATES = [1, 1.2, 1.5, 1.75, 2];
+
+/* ---------- Saved settings ---------- */
+const KEY = "morning-lineup-v1";
+function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+function save() { try { localStorage.setItem(KEY, JSON.stringify({ sources: S.sources, heard: S.heard, maxAge: S.maxAge, rate: S.rate, via: S.via })); } catch (e) {} }
+const saved = load();
+const S = {
+  sources: mergeSources(saved.sources),
+  heard: saved.heard || {},
+  maxAge: saved.maxAge === undefined ? 24 : saved.maxAge,
+  rate: saved.rate || 1,
+  via: saved.via || {},
+  eps: {},        // source id -> {state:"loading"|"ok"|"error", ...episode}
+  current: null,  // source id now loaded in the player
+  chapter: -1
+};
+function mergeSources(list) {
+  if (!Array.isArray(list) || !list.length) return DEFAULT_SOURCES.map(s => ({ ...s }));
+  const known = new Set(list.map(s => s.id));
+  return list.concat(DEFAULT_SOURCES.filter(d => !known.has(d.id)).map(d => ({ ...d })));
+}
+
+/* ---------- Helpers ---------- */
+const $ = id => document.getElementById(id);
+const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text !== undefined) n.textContent = text; return n; };
+function clock(sec) {
+  if (!isFinite(sec) || sec < 0) sec = 0;
+  sec = Math.round(sec);
+  const h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60), s = sec % 60;
+  return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(s).padStart(2, "0");
+}
+function parseDuration(v) {
+  if (!v) return 0;
+  v = String(v).trim();
+  if (/^\d+(\.\d+)?$/.test(v)) return Math.round(parseFloat(v));
+  const p = v.split(":").map(Number);
+  if (p.some(isNaN)) return 0;
+  return p.reduce((a, n) => a * 60 + n, 0);
+}
+function ageLabel(date) {
+  if (!date) return "";
+  const h = (Date.now() - date) / 36e5;
+  if (h < 1) return "Just out";
+  if (h < 20) return Math.round(h) + " hr ago";
+  const now = new Date(), d = new Date(date);
+  const days = Math.round((new Date(now.getFullYear(), now.getMonth(), now.getDate()) - new Date(d.getFullYear(), d.getMonth(), d.getDate())) / 864e5);
+  if (days <= 0) return "Today";
+  if (days === 1) return "Yesterday";
+  if (days < 7) return d.toLocaleDateString(undefined, { weekday: "long" });
+  return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+}
+function plainText(html) {
+  if (!html) return "";
+  const marked = html.replace(/<br\s*\/?>/gi, "\n").replace(/<\/(p|li|div|h\d)>/gi, "\n");
+  const doc = new DOMParser().parseFromString(marked, "text/html");
+  return (doc.body.textContent || "").replace(/[ \t]+/g, " ").replace(/\n\s*\n+/g, "\n").trim();
+}
+/* Many shows list their stories with timestamps, e.g. "(01:56) Hurricane prep". Those become skip points. */
+function findStories(text, duration) {
+  const out = [], seen = new Set();
+  const push = (stamp, label) => {
+    const t = parseDuration(stamp);
+    label = label.replace(/^[\s\-–—:|]+/, "").replace(/\s+/g, " ").trim();
+    if (!label || label.length < 3 || seen.has(t)) return;
+    if (duration && t >= duration) return;
+    seen.add(t);
+    out.push({ t, label: label.length > 90 ? label.slice(0, 88) + "…" : label });
+  };
+  let m;
+  const paren = /\((\d{1,2}:\d{2}(?::\d{2})?)\)\s*([^()\n]{3,120}?)(?=\s*\(\d{1,2}:\d{2}|\n|$)/g;
+  while ((m = paren.exec(text))) push(m[1], m[2]);
+  if (out.length < 2) {
+    for (const line of text.split("\n")) {
+      m = /^\s*\[?(\d{1,2}:\d{2}(?::\d{2})?)\]?\s*[-–—:|]?\s*(.{3,120})$/.exec(line);
+      if (m) push(m[1], m[2]);
+    }
+  }
+  out.sort((a, b) => a.t - b.t);
+  return out.length >= 2 ? out : [];
+}
+function firstSentence(text) {
+  const clean = text.split("\n").filter(l => !/^\W*\d{1,2}:\d{2}/.test(l)).join(" ").trim();
+  if (clean.length <= 220) return clean;
+  const cut = clean.slice(0, 220);
+  return cut.slice(0, Math.max(cut.lastIndexOf(". ") + 1, cut.lastIndexOf(" "))).trim() + "…";
+}
+
+/* ---------- Fetching and reading feeds ---------- */
+async function getText(url, ms) {
+  const ctl = new AbortController();
+  const timer = setTimeout(() => ctl.abort(), ms || 12000);
+  try {
+    const r = await fetch(url, { signal: ctl.signal, cache: "no-store" });
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    const t = await r.text();
+    if (!/<(rss|feed)[\s>]/i.test(t.slice(0, 4000))) throw new Error("Not a podcast feed");
+    return t;
+  } finally { clearTimeout(timer); }
+}
+async function fetchFeed(url) {
+  const routes = [u => u].concat(RELAYS);
+  const start = S.via[url] || 0;
+  const order = routes.map((_, i) => (i + start) % routes.length);
+  let lastErr;
+  for (const i of order) {
+    try {
+      const text = await getText(routes[i](url));
+      if (S.via[url] !== i) { S.via[url] = i; save(); }
+      return text;
+    } catch (e) { lastErr = e; }
+  }
+  throw lastErr || new Error("Unreachable");
+}
+function tagText(node, name) {
+  const hit = node.getElementsByTagName(name)[0];
+  return hit ? (hit.textContent || "").trim() : "";
+}
+function readFeed(xml) {
+  const doc = new DOMParser().parseFromString(xml, "text/xml");
+  if (doc.getElementsByTagName("parsererror").length) throw new Error("Feed could not be read");
+  const channel = doc.getElementsByTagName("channel")[0] || doc.documentElement;
+  const showTitle = tagText(channel, "title");
+  const items = Array.from(doc.getElementsByTagName("item")).concat(Array.from(doc.getElementsByTagName("entry")));
+  let best = null;
+  for (const it of items.slice(0, 15)) {
+    let audio = "";
+    const enc = it.getElementsByTagName("enclosure")[0];
+    if (enc) audio = enc.getAttribute("url") || "";
+    if (!audio) {
+      const link = Array.from(it.getElementsByTagName("link")).find(l => l.getAttribute("rel") === "enclosure");
+      if (link) audio = link.getAttribute("href") || "";
+    }
+    if (!audio) continue;
+    const when = Date.parse(tagText(it, "pubDate") || tagText(it, "published") || tagText(it, "updated")) || 0;
+    if (!best || when > best.date) {
+      const duration = parseDuration(tagText(it, "itunes:duration"));
+      const text = plainText(tagText(it, "content:encoded") || tagText(it, "description") || tagText(it, "itunes:summary") || tagText(it, "summary"));
+      best = {
+        guid: tagText(it, "guid") || tagText(it, "id") || audio,
+        title: tagText(it, "title") || "Latest episode",
+        audio: audio.trim(), date: when, duration,
+        summary: firstSentence(text), stories: findStories(text, duration)
+      };
+    }
+  }
+  if (!best) throw new Error("No playable episode in this feed");
+  return { showTitle, episode: best };
+}
+async function loadSource(src) {
+  S.eps[src.id] = { state: "loading" };
+  render();
+  try {
+    const { episode } = readFeed(await fetchFeed(src.url));
+    S.eps[src.id] = { state: "ok", ...episode };
+  } catch (e) {
+    S.eps[src.id] = { state: "error", message: e && e.name === "AbortError" ? "Timed out" : "Couldn't reach this show" };
+  }
+  render();
+}
+async function loadAll() {
+  $("refresh").disabled = true;
+  await Promise.all(S.sources.filter(s => s.on).map(loadSource));
+  $("refresh").disabled = false;
+}
+
+/* ---------- Running order ---------- */
+function isFresh(ep) { return !S.maxAge || !ep.date || (Date.now() - ep.date) <= S.maxAge * 36e5; }
+function status(src) {
+  const ep = S.eps[src.id];
+  if (!ep || ep.state === "loading") return "loading";
+  if (ep.state === "error") return "error";
+  if (S.heard[ep.guid]) return "heard";
+  if (!isFresh(ep)) return "stale";
+  return "queued";
+}
+function shown() { return S.sources.filter(s => s.on); }
+function queue() { return shown().filter(s => status(s) === "queued"); }
+function nextAfter(id) {
+  const list = shown();
+  const from = list.findIndex(s => s.id === id);
+  return list.slice(from + 1).find(s => status(s) === "queued") || null;
+}
+
+/* ---------- Rendering ---------- */
+function render() {
+  const list = $("rundown");
+  list.textContent = "";
+  const rows = shown();
+  if (!rows.length) {
+    const li = el("li", "row");
+    li.append(el("span", "slot", "–"), el("div", "main", "No shows are switched on. Open Sources to pick some."));
+    list.append(li);
+  }
+  let slot = 0;
+  for (const src of rows) {
+    const st = status(src), ep = S.eps[src.id] || {};
+    const li = el("li", "row" + (st === "queued" ? "" : " out") + (S.current === src.id ? " playing" : ""));
+    li.append(el("span", "slot", st === "queued" ? String(++slot).padStart(2, "0") : "–"));
+    const main = el("div", "main");
+    const head = el("div", "src");
+    head.append(el("span", "", src.name));
+    if (S.current === src.id) head.append(el("span", "tag air", "On air"));
+    else if (st === "heard") head.append(el("span", "tag", "Heard"));
+    else if (st === "stale") head.append(el("span", "tag", "Nothing new"));
+    else if (st === "error") head.append(el("span", "tag err", "Unavailable"));
+    main.append(head);
+    if (st === "loading") main.append(el("div", "skel"));
+    else if (st === "error") main.append(el("p", "sum", ep.message + ". Refresh to try again."));
+    else {
+      const b = el("button", "playrow");
+      b.type = "button";
+      b.setAttribute("aria-label", "Play " + src.name + ": " + ep.title);
+      b.append(el("h2", "ttl", ep.title));
+      b.addEventListener("click", () => play(src.id, 0));
+      main.append(b);
+      if (ep.summary) main.append(el("p", "sum", ep.summary));
+      if (ep.stories.length) {
+        const ul = el("ul", "stories");
+        ep.stories.forEach((c, i) => {
+          const item = el("li", S.current === src.id && S.chapter === i ? "now" : "");
+          const cb = el("button");
+          cb.type = "button";
+          cb.append(el("span", "t", clock(c.t)), el("span", "", c.label));
+          cb.addEventListener("click", () => play(src.id, c.t));
+          item.append(cb);
+          ul.append(item);
+        });
+        main.append(ul);
+      }
+    }
+    li.append(main);
+    const meta = el("div", "meta");
+    if (ep.state === "ok") {
+      meta.append(el("div", "", ep.duration ? clock(ep.duration) : "—"));
+      meta.append(el("div", "", ageLabel(ep.date)));
+    }
+    li.append(meta);
+    list.append(li);
+  }
+  renderRuntime();
+}
+function renderRuntime() {
+  const q = queue(), rows = shown();
+  const loading = rows.some(s => status(s) === "loading");
+  const box = $("runtime");
+  $("playAll").disabled = !q.length;
+  $("playAllLabel").textContent = S.current && !A.paused ? "Restart lineup" : "Play lineup";
+  if (!q.length) {
+    box.textContent = loading ? "Checking your sources for this morning's episodes…"
+      : rows.length ? "Nothing new to play right now. Widen the time window or tap any show to play it anyway."
+      : "No shows switched on.";
+    return;
+  }
+  const total = q.reduce((a, s) => a + (S.eps[s.id].duration || 0), 0) / S.rate;
+  const mins = Math.max(1, Math.round(total / 60));
+  const end = new Date(Date.now() + total * 1000).toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+  box.textContent = "";
+  box.append(el("b", "", q.length + (q.length === 1 ? " show" : " shows") + ", about " + mins + " min"),
+    document.createTextNode(S.rate !== 1 ? " at " + S.rate + "×" : ""),
+    document.createTextNode(". Start now and you're done by " + end + (loading ? ". Still checking the rest…" : ".")));
+}
+function renderSources() {
+  const ul = $("srclist");
+  ul.textContent = "";
+  S.sources.forEach((src, i) => {
+    const li = el("li");
+    const cb = el("input");
+    cb.type = "checkbox"; cb.id = "on-" + src.id; cb.checked = !!src.on;
+    cb.addEventListener("change", () => {
+      src.on = cb.checked; save();
+      if (src.on && !S.eps[src.id]) loadSource(src); else render();
+    });
+    const label = el("label");
+    label.htmlFor = cb.id;
+    label.append(el("span", "", src.name), el("small", "", src.url.replace(/^https?:\/\//, "")));
+    const tools = el("div", "tools");
+    const mk = (title, path, fn, disabled) => {
+      const b = el("button", "mini"); b.type = "button"; b.title = title; b.setAttribute("aria-label", title + ": " + src.name); b.disabled = !!disabled;
+      b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + path + '"/></svg>';
+      b.addEventListener("click", fn); return b;
+    };
+    const move = d => () => { const j = i + d; [S.sources[i], S.sources[j]] = [S.sources[j], S.sources[i]]; save(); renderSources(); render(); };
+    tools.append(mk("Move up", "M12 6l7 8H5z", move(-1), i === 0), mk("Move down", "M12 18l-7-8h14z", move(1), i === S.sources.length - 1));
+    if (src.custom) tools.append(mk("Remove", "M6 7h12l-1 13H7zM9 4h6l1 2H8z", () => {
+      S.sources.splice(i, 1); delete S.eps[src.id]; save(); renderSources(); render();
+    }));
+    li.append(cb, label, tools);
+    ul.append(li);
+  });
+}
+
+/* ---------- Playback ---------- */
+const A = $("audio");
+function play(id, at) {
+  const src = S.sources.find(s => s.id === id), ep = S.eps[id];
+  if (!src || !ep || ep.state !== "ok") return;
+  if (S.current !== id) {
+    S.current = id; S.chapter = -1;
+    A.src = ep.audio;
+    $("who").textContent = src.name;
+    $("what").textContent = ep.title;
+    $("seek").disabled = false;
+    setMediaSession(src, ep);
+  }
+  const go = () => { if (at) { try { A.currentTime = at; } catch (e) {} } };
+  if (A.readyState >= 1) go(); else A.addEventListener("loadedmetadata", go, { once: true });
+  A.playbackRate = S.rate;
+  const p = A.play();
+  if (p && p.catch) p.catch(() => {});
+  render();
+}
+function finishCurrent(markHeard) {
+  const ep = S.eps[S.current];
+  if (markHeard && ep && ep.guid) {
+    S.heard[ep.guid] = Date.now();
+    const keys = Object.keys(S.heard);
+    if (keys.length > 300) keys.sort((a, b) => S.heard[a] - S.heard[b]).slice(0, keys.length - 300).forEach(k => delete S.heard[k]);
+    save();
+  }
+}
+function advance(markHeard) {
+  const was = S.current;
+  const nxt = was ? nextAfter(was) : null;
+  finishCurrent(markHeard);
+  if (nxt) { play(nxt.id, 0); return; }
+  A.pause();
+  S.current = null; S.chapter = -1;
+  A.removeAttribute("src"); A.load();
+  $("who").textContent = "That's the lineup";
+  $("what").textContent = "You're caught up.";
+  $("seek").disabled = true; $("seek").value = 0; $("cur").textContent = "0:00"; $("rem").textContent = "0:00";
+  render();
+}
+function stories() { const ep = S.eps[S.current]; return ep && ep.stories ? ep.stories : []; }
+function nextThing() {
+  const c = stories(), t = A.currentTime;
+  const upcoming = c.find(x => x.t > t + 1);
+  if (upcoming) A.currentTime = upcoming.t; else if (S.current) advance(true);
+}
+function prevThing() {
+  if (!S.current) return;
+  const c = stories(), t = A.currentTime;
+  const earlier = c.filter(x => x.t < t - 3);
+  if (earlier.length) { A.currentTime = earlier[earlier.length - 1].t; return; }
+  if (t > 5) { A.currentTime = 0; return; }
+  const list = shown(), i = list.findIndex(s => s.id === S.current);
+  const back = list.slice(0, i).reverse().find(s => (S.eps[s.id] || {}).state === "ok");
+  if (back) play(back.id, 0); else A.currentTime = 0;
+}
+function toggle() {
+  if (!S.current) { const q = queue(); if (q.length) play(q[0].id, 0); return; }
+  if (A.paused) { const p = A.play(); if (p && p.catch) p.catch(() => {}); } else A.pause();
+}
+function setMediaSession(src, ep) {
+  if (!("mediaSession" in navigator)) return;
+  try {
+    navigator.mediaSession.metadata = new MediaMetadata({ title: ep.title, artist: src.name, album: "Morning Lineup" });
+    const h = navigator.mediaSession.setActionHandler.bind(navigator.mediaSession);
+    h("play", () => A.play()); h("pause", () => A.pause());
+    h("nexttrack", nextThing); h("previoustrack", prevThing);
+    h("seekbackward", () => { A.currentTime = Math.max(0, A.currentTime - 15); });
+    h("seekforward", () => { A.currentTime = A.currentTime + 30; });
+  } catch (e) {}
+}
+function total() { const ep = S.eps[S.current] || {}; return isFinite(A.duration) && A.duration > 0 ? A.duration : (ep.duration || 0); }
+
+A.addEventListener("timeupdate", () => {
+  const d = total(), t = A.currentTime;
+  $("cur").textContent = clock(t);
+  $("rem").textContent = d ? "-" + clock((d - t) / (S.rate || 1)) : "";
+  if (d && !seeking) $("seek").value = Math.round(t / d * 1000);
+  const c = stories();
+  let idx = -1;
+  for (let i = 0; i < c.length; i++) if (c[i].t <= t + .5) idx = i;
+  if (idx !== S.chapter) { S.chapter = idx; render(); }
+});
+A.addEventListener("ended", () => advance(true));
+A.addEventListener("error", () => {
+  if (!S.current) return;
+  const ep = S.eps[S.current];
+  if (ep) { ep.state = "error"; ep.message = "The audio wouldn't play"; }
+  advance(false);
+});
+const setIcon = () => {
+  $("toggleIcon").setAttribute("d", A.paused ? "M7 4.5v15l13-7.5z" : "M6 5h4.5v14H6zM13.5 5H18v14h-4.5z");
+  $("toggle").setAttribute("aria-label", A.paused ? "Play" : "Pause");
+  renderRuntime();
+};
+A.addEventListener("play", setIcon); A.addEventListener("pause", setIcon);
+
+let seeking = false;
+$("seek").addEventListener("input", () => { seeking = true; const d = total(); if (d) $("cur").textContent = clock($("seek").value / 1000 * d); });
+$("seek").addEventListener("change", () => { const d = total(); if (d) A.currentTime = $("seek").value / 1000 * d; seeking = false; });
+$("toggle").addEventListener("click", toggle);
+$("next").addEventListener("click", nextThing);
+$("prev").addEventListener("click", prevThing);
+$("back").addEventListener("click", () => { A.currentTime = Math.max(0, A.currentTime - 15); });
+$("fwd").addEventListener("click", () => { if (S.current) A.currentTime = A.currentTime + 30; });
+function showRate() { $("rate").textContent = S.rate + "×"; }
+$("rate").addEventListener("click", () => {
+  S.rate = RATES[(RATES.indexOf(S.rate) + 1) % RATES.length] || 1;
+  A.playbackRate = S.rate; save(); showRate(); renderRuntime();
+});
+$("playAll").addEventListener("click", () => { const q = queue(); if (q.length) play(q[0].id, 0); });
+$("refresh").addEventListener("click", loadAll);
+$("editBtn").addEventListener("click", () => {
+  const ed = $("editor"); ed.hidden = !ed.hidden;
+  $("editBtn").setAttribute("aria-expanded", String(!ed.hidden));
+  if (!ed.hidden) renderSources();
+});
+$("maxAge").addEventListener("change", () => { S.maxAge = Number($("maxAge").value); save(); render(); });
+$("addForm").addEventListener("submit", async ev => {
+  ev.preventDefault();
+  const note = $("addNote"), url = $("feedUrl").value.trim();
+  note.className = "note";
+  if (S.sources.some(s => s.url === url)) { note.textContent = "That show is already in your list."; return; }
+  note.textContent = "Checking that address…";
+  $("addBtn").disabled = true;
+  try {
+    const { showTitle, episode } = readFeed(await fetchFeed(url));
+    const src = { id: "c-" + Date.now().toString(36), name: showTitle || new URL(url).hostname, url, on: true, custom: true };
+    S.sources.push(src);
+    S.eps[src.id] = { state: "ok", ...episode };
+    save(); renderSources(); render();
+    $("feedUrl").value = "";
+    note.textContent = "Added " + src.name + ".";
+  } catch (e) {
+    note.className = "note err";
+    note.textContent = "That address didn't return a podcast feed. Check that it's the show's RSS link, not its web page.";
+  }
+  $("addBtn").disabled = false;
+});
+document.addEventListener("keydown", ev => {
+  if (/^(INPUT|SELECT|TEXTAREA|BUTTON)$/.test(ev.target.tagName)) return;
+  if (ev.code === "Space") { ev.preventDefault(); toggle(); }
+  else if (ev.code === "ArrowRight") nextThing();
+  else if (ev.code === "ArrowLeft") prevThing();
+});
+
+/* ---------- Start ---------- */
+$("dateline").textContent = new Date().toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric" });
+$("maxAge").value = String(S.maxAge);
+if ($("maxAge").value !== String(S.maxAge)) { S.maxAge = 24; $("maxAge").value = "24"; }
+showRate();
+render();
+loadAll();
+</script>
+</body>
+</html>
