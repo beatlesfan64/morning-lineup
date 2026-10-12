@@ -120,6 +120,7 @@ h1 { font: 700 clamp(34px, 8vw, 52px)/1 var(--display); letter-spacing: -.02em; 
 .tools { display: flex; gap: 4px; }
 .addfeed { display: flex; flex-wrap: wrap; gap: 8px; }
 .addfeed input { flex: 1 1 240px; min-width: 0; border: 1px solid var(--rule); background: var(--paper); border-radius: 8px; padding: 9px 12px; font-size: 14px; }
+.panel a { color: var(--signal); text-underline-offset: 3px; }
 .note { font-size: 13px; color: var(--muted); min-height: 1.3em; }
 .note.err { color: var(--bad); }
 
@@ -175,13 +176,9 @@ h1 { font: 700 clamp(34px, 8vw, 52px)/1 var(--display); letter-spacing: -.02em; 
 
   <section class="panel" id="editor" hidden>
     <h2>Sources</h2>
-    <p>Tick the shows you want and use the arrows to set the running order. Paste any podcast RSS address to add your own.</p>
+    <p>Tick the shows you want and use the arrows to set the running order.</p>
     <ul class="srclist" id="srclist"></ul>
-    <form class="addfeed" id="addForm">
-      <input id="feedUrl" type="url" inputmode="url" placeholder="https://example.com/podcast/feed.xml" aria-label="Podcast RSS address" required>
-      <button class="btn" type="submit" id="addBtn">Add show</button>
-    </form>
-    <div class="note" id="addNote" aria-live="polite"></div>
+    <p id="addHelp">To add a show, put its podcast RSS address in <a id="editLink" href="https://github.com" target="_blank" rel="noopener">your show list on GitHub</a>. It appears here within about half an hour.</p>
   </section>
 
   <ol class="rundown" id="rundown" aria-label="This morning's running order"></ol>
@@ -215,6 +212,7 @@ const DEFAULT_SOURCES = [
   { id: "nyt-head",   name: "The Headlines (NYT)",       url: "https://feeds.simplecast.com/ydACIPHO", on: true },
   { id: "cnn-5",      name: "CNN 5 Things",              url: "https://feeds.megaphone.fm/WMHY2007701094", on: true },
   { id: "fox-hour",   name: "Fox News Hourly Update",    url: "https://feeds.megaphone.fm/FOXM2252206613", on: true },
+  { id: "reuters",    name: "Reuters World News",        url: "https://feeds.megaphone.fm/reutersworldnews", on: true },
   { id: "mkt-am",     name: "Marketplace Morning Report", url: "https://feeds.publicradio.org/public_feeds/marketplace-morning-report", on: true },
   { id: "ft-brief",   name: "FT News Briefing",          url: "https://feeds.acast.com/public/shows/ftnewsbriefing", on: true },
   { id: "up-first",   name: "Up First (NPR)",            url: "https://feeds.npr.org/510318/podcast.xml", on: true },
@@ -233,23 +231,43 @@ const RATES = [1, 1.2, 1.5, 1.75, 2];
 /* ---------- Saved settings ---------- */
 const KEY = "morning-lineup-v1";
 function load() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
-function save() { try { localStorage.setItem(KEY, JSON.stringify({ sources: S.sources, heard: S.heard, maxAge: S.maxAge, rate: S.rate, via: S.via })); } catch (e) {} }
+function save() { try { localStorage.setItem(KEY, JSON.stringify({ prefs: S.prefs, heard: S.heard, maxAge: S.maxAge, rate: S.rate })); } catch (e) {} }
 const saved = load();
 const S = {
-  sources: mergeSources(saved.sources),
+  catalog: DEFAULT_SOURCES.map(s => ({ ...s })),
+  prefs: migratePrefs(saved),
+  sources: [],
   heard: saved.heard || {},
   maxAge: saved.maxAge === undefined ? 24 : saved.maxAge,
   rate: saved.rate || 1,
-  via: saved.via || {},
   eps: {},        // source id -> {state:"loading"|"ok"|"error", ...episode}
   current: null,  // source id now loaded in the player
   chapter: -1
 };
-function mergeSources(list) {
-  if (!Array.isArray(list) || !list.length) return DEFAULT_SOURCES.map(s => ({ ...s }));
-  const known = new Set(list.map(s => s.id));
-  return list.concat(DEFAULT_SOURCES.filter(d => !known.has(d.id)).map(d => ({ ...d })));
+function migratePrefs(sv) {
+  if (sv.prefs && Array.isArray(sv.prefs.order)) return { order: sv.prefs.order, on: sv.prefs.on || {} };
+  const p = { order: [], on: {} };
+  if (Array.isArray(sv.sources)) sv.sources.forEach(x => { if (x && x.id && !x.custom) { p.order.push(x.id); p.on[x.id] = !!x.on; } });
+  return p;
 }
+/* Shows keep the order and on/off state chosen on this device; shows new to the list slot in where the list puts them. */
+function applyPrefs() {
+  const known = new Set(S.prefs.order);
+  const byId = new Map(S.catalog.map(x => [x.id, x]));
+  const out = S.prefs.order.filter(id => byId.has(id)).map(id => byId.get(id));
+  S.catalog.forEach((x, i) => {
+    if (known.has(x.id)) return;
+    let at = 0;
+    for (let j = i - 1; j >= 0; j--) { const k = out.indexOf(S.catalog[j]); if (k >= 0) { at = k + 1; break; } }
+    out.splice(at, 0, x);
+  });
+  S.sources = out.map(x => ({ ...x, on: S.prefs.on[x.id] === undefined ? x.on !== false : !!S.prefs.on[x.id] }));
+}
+function rememberPrefs() {
+  S.prefs = { order: S.sources.map(x => x.id), on: Object.fromEntries(S.sources.map(x => [x.id, !!x.on])) };
+  save();
+}
+applyPrefs();
 
 /* ---------- Helpers ---------- */
 const $ = id => document.getElementById(id);
@@ -328,19 +346,38 @@ async function getText(url, ms) {
     return t;
   } finally { clearTimeout(timer); }
 }
-async function fetchFeed(url) {
-  const routes = [u => u].concat(RELAYS);
-  const start = S.via[url] || 0;
-  const order = routes.map((_, i) => (i + start) % routes.length);
+/* On GitHub Pages, a scheduled job in the repository saves a copy of every feed. Those copies always load. */
+const REPO = (() => {
+  const h = location.hostname;
+  if (!/\.github\.io$/i.test(h)) return null;
+  const owner = h.split(".")[0];
+  const first = location.pathname.split("/").filter(Boolean)[0];
+  return { owner, repo: first && !/\.html?$/i.test(first) ? first : h };
+})();
+function routesFor(src) {
+  const name = encodeURIComponent(src.id) + ".xml", r = [];
+  if (REPO) r.push("https://raw.githubusercontent.com/" + REPO.owner + "/" + REPO.repo + "/main/feeds/" + name);
+  if (location.protocol !== "file:") r.push("feeds/" + name);
+  r.push(src.url);
+  RELAYS.forEach(f => r.push(f(src.url)));
+  return r;
+}
+async function fetchFeed(src) {
   let lastErr;
-  for (const i of order) {
-    try {
-      const text = await getText(routes[i](url));
-      if (S.via[url] !== i) { S.via[url] = i; save(); }
-      return text;
-    } catch (e) { lastErr = e; }
+  for (const u of routesFor(src)) {
+    try { return await getText(u, 10000); } catch (e) { lastErr = e; }
   }
   throw lastErr || new Error("Unreachable");
+}
+async function loadCatalog() {
+  if (location.protocol === "file:") return;
+  try {
+    const r = await fetch("sources.json", { cache: "no-store" });
+    if (!r.ok) return;
+    const list = await r.json();
+    const clean = Array.isArray(list) ? list.filter(x => x && x.id && x.name && x.url).map(x => ({ id: String(x.id), name: String(x.name), url: String(x.url), on: x.on !== false })) : [];
+    if (clean.length) { S.catalog = clean; applyPrefs(); }
+  } catch (e) {}
 }
 function tagText(node, name) {
   const hit = node.getElementsByTagName(name)[0];
@@ -381,7 +418,7 @@ async function loadSource(src) {
   S.eps[src.id] = { state: "loading" };
   render();
   try {
-    const { episode } = readFeed(await fetchFeed(src.url));
+    const { episode } = readFeed(await fetchFeed(src));
     S.eps[src.id] = { state: "ok", ...episode };
   } catch (e) {
     S.eps[src.id] = { state: "error", message: e && e.name === "AbortError" ? "Timed out" : "Couldn't reach this show" };
@@ -498,7 +535,7 @@ function renderSources() {
     const cb = el("input");
     cb.type = "checkbox"; cb.id = "on-" + src.id; cb.checked = !!src.on;
     cb.addEventListener("change", () => {
-      src.on = cb.checked; save();
+      src.on = cb.checked; rememberPrefs();
       if (src.on && !S.eps[src.id]) loadSource(src); else render();
     });
     const label = el("label");
@@ -510,11 +547,8 @@ function renderSources() {
       b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="' + path + '"/></svg>';
       b.addEventListener("click", fn); return b;
     };
-    const move = d => () => { const j = i + d; [S.sources[i], S.sources[j]] = [S.sources[j], S.sources[i]]; save(); renderSources(); render(); };
+    const move = d => () => { const j = i + d; [S.sources[i], S.sources[j]] = [S.sources[j], S.sources[i]]; rememberPrefs(); renderSources(); render(); };
     tools.append(mk("Move up", "M12 6l7 8H5z", move(-1), i === 0), mk("Move down", "M12 18l-7-8h14z", move(1), i === S.sources.length - 1));
-    if (src.custom) tools.append(mk("Remove", "M6 7h12l-1 13H7zM9 4h6l1 2H8z", () => {
-      S.sources.splice(i, 1); delete S.eps[src.id]; save(); renderSources(); render();
-    }));
     li.append(cb, label, tools);
     ul.append(li);
   });
@@ -640,27 +674,6 @@ $("editBtn").addEventListener("click", () => {
   if (!ed.hidden) renderSources();
 });
 $("maxAge").addEventListener("change", () => { S.maxAge = Number($("maxAge").value); save(); render(); });
-$("addForm").addEventListener("submit", async ev => {
-  ev.preventDefault();
-  const note = $("addNote"), url = $("feedUrl").value.trim();
-  note.className = "note";
-  if (S.sources.some(s => s.url === url)) { note.textContent = "That show is already in your list."; return; }
-  note.textContent = "Checking that address…";
-  $("addBtn").disabled = true;
-  try {
-    const { showTitle, episode } = readFeed(await fetchFeed(url));
-    const src = { id: "c-" + Date.now().toString(36), name: showTitle || new URL(url).hostname, url, on: true, custom: true };
-    S.sources.push(src);
-    S.eps[src.id] = { state: "ok", ...episode };
-    save(); renderSources(); render();
-    $("feedUrl").value = "";
-    note.textContent = "Added " + src.name + ".";
-  } catch (e) {
-    note.className = "note err";
-    note.textContent = "That address didn't return a podcast feed. Check that it's the show's RSS link, not its web page.";
-  }
-  $("addBtn").disabled = false;
-});
 document.addEventListener("keydown", ev => {
   if (/^(INPUT|SELECT|TEXTAREA|BUTTON)$/.test(ev.target.tagName)) return;
   if (ev.code === "Space") { ev.preventDefault(); toggle(); }
@@ -673,8 +686,10 @@ $("dateline").textContent = new Date().toLocaleDateString(undefined, { weekday: 
 $("maxAge").value = String(S.maxAge);
 if ($("maxAge").value !== String(S.maxAge)) { S.maxAge = 24; $("maxAge").value = "24"; }
 showRate();
+if (REPO) $("editLink").href = "https://github.com/" + REPO.owner + "/" + REPO.repo + "/edit/main/sources.json";
+else $("addHelp").hidden = true;
 render();
-loadAll();
+loadCatalog().then(() => { render(); loadAll(); });
 </script>
 </body>
 </html>
