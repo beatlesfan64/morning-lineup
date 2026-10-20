@@ -5,7 +5,7 @@
     <link>https://www.npr.org/podcasts/510318/up-first</link>
     <description><![CDATA[NPR's Up First is the news you need to start your day. The three biggest stories of the day, with reporting and analysis from NPR News — in 10 minutes. Available weekdays at 6:30 a.m. ET, with hosts Leila Fadel, Steve Inskeep, Michel Martin and A Martinez. Also available on Saturdays at 9 a.m. ET, with Ayesha Rascoe and Scott Simon. On Sundays, hear a longer exploration behind the headlines with Ayesha Rascoe on "The Sunday Story," available by 8 a.m. ET. Subscribe and listen, then support your local NPR station at donate.npr.org.<br><br><em> Support public media by joining NPR+ at </em><a href="http://plus.npr.org/"target="_blank"   ><em>plus.npr.org</em></a><em>. You’ll get perks for over 25 NPR podcasts, including sponsor-free listening for Up First, NPR News Now, and more.</em>]]></description>
     <copyright>Copyright 2015-2026 NPR - For Personal Use Only</copyright>
-    <generator>NPR Feed Publish Service v2.4.0</generator>
+    <generator>NPR Feed Publish Service v2.5.0</generator>
     <language>en-us</language>
     <itunes:author>NPR</itunes:author>
     <itunes:block>no</itunes:block>
@@ -24,7 +24,7 @@
       <title>Up First from NPR</title>
       <link>https://www.npr.org/podcasts/510318/up-first</link>
     </image>
-    <lastBuildDate>Tue, 20 Oct 2026 14:21:12 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 15:15:03 +0000</lastBuildDate>
     <media:restriction type="country" relationship="allow">ad ar at au be bg bo br ca ch cl co cr cy cz de dk do ec ee es fi fr gb gr gt hn hu id ie il is it jp li lt lu lv mc mt mx my ni nl no nz pa pe pl pt py ro se sk sv th us uy za</media:restriction>
     <podcast:funding url="https://plus.npr.org/?utm_source=podcast_rss_funding_tag">Support NPR by enrolling in NPR+!</podcast:funding>
     <item>
