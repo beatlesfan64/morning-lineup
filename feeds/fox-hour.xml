@@ -30,22 +30,22 @@
       <itunes:category text="Sports News"/>
     </itunes:category>
     <item>
-      <title>12AM ET 10/21/2026 Newscast</title>
-      <description>12AM ET 10/21/2026 Newscast
+      <title>7AM ET 10/21/2026 Newscast</title>
+      <description>7AM ET 10/21/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Wed, 21 Oct 2026 04:06:00 -0000</pubDate>
+      <pubDate>Wed, 21 Oct 2026 11:06:00 -0000</pubDate>
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:subtitle>12AM ET 10/21/2026 Newscast</itunes:subtitle>
-      <itunes:summary>12AM ET 10/21/2026 Newscast
+      <itunes:subtitle>7AM ET 10/21/2026 Newscast</itunes:subtitle>
+      <itunes:summary>7AM ET 10/21/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
       <content:encoded>
-        <![CDATA[12AM ET 10/21/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+        <![CDATA[7AM ET 10/21/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
       </content:encoded>
-      <itunes:duration>313</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[38881ece-cd05-11f1-8c02-ab704d8f1316]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM5867732997.mp3" length="0" type="audio/mpeg"/>
+      <itunes:duration>314</itunes:duration>
+      <guid isPermaLink="false"><![CDATA[e1726cee-cd3f-11f1-a8ca-8b3d986beaff]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM5222385846.mp3" length="0" type="audio/mpeg"/>
     </item>
   </channel>
 </rss>
