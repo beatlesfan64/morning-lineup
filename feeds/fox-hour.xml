@@ -30,22 +30,22 @@
       <itunes:category text="Sports News"/>
     </itunes:category>
     <item>
-      <title>2PM ET 10/22/2026 Newscast</title>
-      <description>2PM ET 10/22/2026 Newscast
+      <title>5PM ET 10/22/2026 Newscast</title>
+      <description>5PM ET 10/22/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Thu, 22 Oct 2026 18:06:00 -0000</pubDate>
+      <pubDate>Thu, 22 Oct 2026 21:06:00 -0000</pubDate>
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:subtitle>2PM ET 10/22/2026 Newscast</itunes:subtitle>
-      <itunes:summary>2PM ET 10/22/2026 Newscast
+      <itunes:subtitle>5PM ET 10/22/2026 Newscast</itunes:subtitle>
+      <itunes:summary>5PM ET 10/22/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
       <content:encoded>
-        <![CDATA[2PM ET 10/22/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+        <![CDATA[5PM ET 10/22/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
       </content:encoded>
       <itunes:duration>313</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[bc2227cc-ce43-11f1-80c7-b71b6290eef7]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM4090439704.mp3" length="0" type="audio/mpeg"/>
+      <guid isPermaLink="false"><![CDATA[dd8a5cd6-ce5c-11f1-b2b7-d37201289ea5]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM9090691317.mp3" length="0" type="audio/mpeg"/>
     </item>
   </channel>
 </rss>
