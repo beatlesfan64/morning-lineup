@@ -30,22 +30,22 @@
       <itunes:category text="Sports News"/>
     </itunes:category>
     <item>
-      <title>7AM ET 10/23/2026 Newscast</title>
-      <description>7AM ET 10/23/2026 Newscast
+      <title>President Trump invoking an act to try and lower prices at the pump</title>
+      <description>10AM ET 10/23/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Fri, 23 Oct 2026 11:06:00 -0000</pubDate>
+      <pubDate>Fri, 23 Oct 2026 14:06:00 -0000</pubDate>
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:subtitle>7AM ET 10/23/2026 Newscast</itunes:subtitle>
-      <itunes:summary>7AM ET 10/23/2026 Newscast
+      <itunes:subtitle>10AM ET 10/23/2026 Newscast</itunes:subtitle>
+      <itunes:summary>10AM ET 10/23/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
       <content:encoded>
-        <![CDATA[7AM ET 10/23/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+        <![CDATA[10AM ET 10/23/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
       </content:encoded>
       <itunes:duration>313</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[3635b3a6-ced2-11f1-89c5-23620cec628a]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM8643709430.mp3" length="0" type="audio/mpeg"/>
+      <guid isPermaLink="false"><![CDATA[5ececb04-ceeb-11f1-9e89-3f0d17918c39]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM7272074242.mp3" length="0" type="audio/mpeg"/>
     </item>
   </channel>
 </rss>
