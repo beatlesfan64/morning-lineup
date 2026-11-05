@@ -5,7 +5,7 @@
     <link>https://www.npr.org/podcasts/500005/npr-news-now</link>
     <description><![CDATA[The latest news in five minutes. Updated hourly. <br><br><em>Support public media by joining NPR+ at </em><a href="http://plus.npr.org/"target="_blank"   ><em>plus.npr.org</em></a><em>. You’ll get perks for over 25 NPR podcasts, including sponsor-free listening for NPR News Now, UP First, and more.</em>]]></description>
     <copyright>Copyright 2007-2026 NPR - For Personal Use Only</copyright>
-    <generator>NPR Feed Publish Service v2.5.2</generator>
+    <generator>NPR Feed Publish Service v2.5.3</generator>
     <language>en-us</language>
     <itunes:author>NPR</itunes:author>
     <itunes:block>no</itunes:block>
@@ -24,47 +24,47 @@
       <title>NPR News Now</title>
       <link>https://www.npr.org/podcasts/500005/npr-news-now</link>
     </image>
-    <lastBuildDate>Thu, 05 Nov 2026 17:09:54 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 23:09:45 +0000</lastBuildDate>
     <media:restriction type="country" relationship="allow">ad ar at au be bg bo br ca ch cl co cr cy cz de dk do ec ee es fi fr gb gr gt hn hu id ie il is it jp li lt lu lv mc mt mx my ni nl no nz pa pe pl pt py ro se sk sv th us uy za</media:restriction>
     <podcast:funding url="https://plus.npr.org/?utm_source=podcast_rss_funding_tag">Support NPR by enrolling in NPR+!</podcast:funding>
     <item>
-      <title>12pm ET, November 05 | The latest headlines from NPR</title>
+      <title>6pm ET, November 05 | The latest headlines from NPR</title>
       <description><![CDATA[The latest headlines from NPR at the top of this hour. <br/><br/>The stories you hear are written, reported and fact-checked by NPR journalists.  Learn more about the standards of our journalism at<a href="http://npr.org/ethics"target="_blank"   > npr.org/ethics</a>. <br/><br/>Support public media with NPR+ and enjoy perks for over 25 podcasts like this one. This show’s perks include sponsor-free listening. Learn more at <a href="http://plus.npr.org/"target="_blank"   >plus.npr.org</a>.<br/><br/>See <a href="https://pcm.adswizz.com">pcm.adswizz.com</a> for information about our collection and use of personal data for sponsorship and to manage your podcast sponsorship preferences.<br/><br/><a href="https://www.npr.org/about-npr/179878450/privacy-policy">NPR Privacy Policy</a>]]></description>
-      <pubDate>Thu, 05 Nov 2026 17:09:52 +0000</pubDate>
-      <guid isPermaLink="false">e3e022f6-7627-4428-9261-47dcf7092f84</guid>
+      <pubDate>Thu, 05 Nov 2026 23:09:43 +0000</pubDate>
+      <guid isPermaLink="false">4ddb0f7a-4455-48bc-bf60-c5d17f36c43f</guid>
       <itunes:block>no</itunes:block>
-      <itunes:title>12pm ET, November 05 | The latest headlines from NPR</itunes:title>
+      <itunes:title>6pm ET, November 05 | The latest headlines from NPR</itunes:title>
       <itunes:duration>280</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
       <content:encoded><![CDATA[The latest headlines from NPR at the top of this hour. <br/><br/>The stories you hear are written, reported and fact-checked by NPR journalists.  Learn more about the standards of our journalism at<a href="http://npr.org/ethics"target="_blank"   > npr.org/ethics</a>. <br/><br/>Support public media with NPR+ and enjoy perks for over 25 podcasts like this one. This show’s perks include sponsor-free listening. Learn more at <a href="http://plus.npr.org/"target="_blank"   >plus.npr.org</a>.<br/><br/>See <a href="https://pcm.adswizz.com">pcm.adswizz.com</a> for information about our collection and use of personal data for sponsorship and to manage your podcast sponsorship preferences.<br/><br/><a href="https://www.npr.org/about-npr/179878450/privacy-policy">NPR Privacy Policy</a>]]></content:encoded>
-      <enclosure length="4586728" type="audio/mpeg" url="https://prfx.byspotify.com/e/play.podtrac.com/npr-500005/npr.simplecastaudio.com/368f8510-314e-46f1-8d26-5b87ed6ab6eb/episodes/175908b3-0024-46e9-8dd6-c6be9977297e/audio/128/default.mp3?awCollectionId=368f8510-314e-46f1-8d26-5b87ed6ab6eb&amp;awEpisodeId=175908b3-0024-46e9-8dd6-c6be9977297e&amp;feed=O9WlY7a5&amp;t=podcast&amp;e=nx-s1-20261105-1200-long&amp;p=500005&amp;d=280&amp;size=4586728"/>
+      <enclosure length="4586728" type="audio/mpeg" url="https://prfx.byspotify.com/e/play.podtrac.com/npr-500005/npr.simplecastaudio.com/368f8510-314e-46f1-8d26-5b87ed6ab6eb/episodes/c9cb969d-f3cc-49bf-ae3f-92bacaabba10/audio/128/default.mp3?awCollectionId=368f8510-314e-46f1-8d26-5b87ed6ab6eb&amp;awEpisodeId=c9cb969d-f3cc-49bf-ae3f-92bacaabba10&amp;feed=O9WlY7a5&amp;t=podcast&amp;e=nx-s1-20261105-1800-long&amp;p=500005&amp;d=280&amp;size=4586728"/>
     </item>
     <item>
-      <title>11am ET, November 05 | The latest headlines from NPR</title>
+      <title>5pm ET, November 05 | The latest headlines from NPR</title>
       <description><![CDATA[The latest headlines from NPR at the top of this hour. <br/><br/>The stories you hear are written, reported and fact-checked by NPR journalists.  Learn more about the standards of our journalism at<a href="http://npr.org/ethics"target="_blank"   > npr.org/ethics</a>. <br/><br/>Support public media with NPR+ and enjoy perks for over 25 podcasts like this one. This show’s perks include sponsor-free listening. Learn more at <a href="http://plus.npr.org/"target="_blank"   >plus.npr.org</a>.<br/><br/>See <a href="https://pcm.adswizz.com">pcm.adswizz.com</a> for information about our collection and use of personal data for sponsorship and to manage your podcast sponsorship preferences.<br/><br/><a href="https://www.npr.org/about-npr/179878450/privacy-policy">NPR Privacy Policy</a>]]></description>
-      <pubDate>Thu, 05 Nov 2026 16:09:38 +0000</pubDate>
-      <guid isPermaLink="false">bff0a85c-8d58-4e7c-a7ad-ceeea178c3d1</guid>
+      <pubDate>Thu, 05 Nov 2026 22:09:43 +0000</pubDate>
+      <guid isPermaLink="false">6a55d959-6319-4e8c-9752-827a647bbda6</guid>
       <itunes:block>no</itunes:block>
-      <itunes:title>11am ET, November 05 | The latest headlines from NPR</itunes:title>
+      <itunes:title>5pm ET, November 05 | The latest headlines from NPR</itunes:title>
       <itunes:duration>280</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
       <content:encoded><![CDATA[The latest headlines from NPR at the top of this hour. <br/><br/>The stories you hear are written, reported and fact-checked by NPR journalists.  Learn more about the standards of our journalism at<a href="http://npr.org/ethics"target="_blank"   > npr.org/ethics</a>. <br/><br/>Support public media with NPR+ and enjoy perks for over 25 podcasts like this one. This show’s perks include sponsor-free listening. Learn more at <a href="http://plus.npr.org/"target="_blank"   >plus.npr.org</a>.<br/><br/>See <a href="https://pcm.adswizz.com">pcm.adswizz.com</a> for information about our collection and use of personal data for sponsorship and to manage your podcast sponsorship preferences.<br/><br/><a href="https://www.npr.org/about-npr/179878450/privacy-policy">NPR Privacy Policy</a>]]></content:encoded>
-      <enclosure length="4586728" type="audio/mpeg" url="https://prfx.byspotify.com/e/play.podtrac.com/npr-500005/npr.simplecastaudio.com/368f8510-314e-46f1-8d26-5b87ed6ab6eb/episodes/8ba03032-f817-402c-897b-800a509141b0/audio/128/default.mp3?awCollectionId=368f8510-314e-46f1-8d26-5b87ed6ab6eb&amp;awEpisodeId=8ba03032-f817-402c-897b-800a509141b0&amp;feed=O9WlY7a5&amp;t=podcast&amp;e=nx-s1-20261105-1100-long&amp;p=500005&amp;d=280&amp;size=4586728"/>
+      <enclosure length="4585475" type="audio/mpeg" url="https://prfx.byspotify.com/e/play.podtrac.com/npr-500005/npr.simplecastaudio.com/368f8510-314e-46f1-8d26-5b87ed6ab6eb/episodes/992b1680-efb3-49e3-9d20-62bc682db92c/audio/128/default.mp3?awCollectionId=368f8510-314e-46f1-8d26-5b87ed6ab6eb&amp;awEpisodeId=992b1680-efb3-49e3-9d20-62bc682db92c&amp;feed=O9WlY7a5&amp;t=podcast&amp;e=nx-s1-20261105-1700-long&amp;p=500005&amp;d=280&amp;size=4585475"/>
     </item>
     <item>
-      <title>10am ET, November 05 | The latest headlines from NPR</title>
+      <title>4pm ET, November 05 | The latest headlines from NPR</title>
       <description><![CDATA[The latest headlines from NPR at the top of this hour. <br/><br/>The stories you hear are written, reported and fact-checked by NPR journalists.  Learn more about the standards of our journalism at<a href="http://npr.org/ethics"target="_blank"   > npr.org/ethics</a>. <br/><br/>Support public media with NPR+ and enjoy perks for over 25 podcasts like this one. This show’s perks include sponsor-free listening. Learn more at <a href="http://plus.npr.org/"target="_blank"   >plus.npr.org</a>.<br/><br/>See <a href="https://pcm.adswizz.com">pcm.adswizz.com</a> for information about our collection and use of personal data for sponsorship and to manage your podcast sponsorship preferences.<br/><br/><a href="https://www.npr.org/about-npr/179878450/privacy-policy">NPR Privacy Policy</a>]]></description>
-      <pubDate>Thu, 05 Nov 2026 15:09:39 +0000</pubDate>
-      <guid isPermaLink="false">ce2e68a7-6a8a-4aaf-8014-e126e2fac61e</guid>
+      <pubDate>Thu, 05 Nov 2026 21:09:55 +0000</pubDate>
+      <guid isPermaLink="false">219fd66c-3bd8-4320-b536-c55e5aaf3a90</guid>
       <itunes:block>no</itunes:block>
-      <itunes:title>10am ET, November 05 | The latest headlines from NPR</itunes:title>
+      <itunes:title>4pm ET, November 05 | The latest headlines from NPR</itunes:title>
       <itunes:duration>280</itunes:duration>
       <itunes:explicit>no</itunes:explicit>
       <itunes:episodeType>full</itunes:episodeType>
       <content:encoded><![CDATA[The latest headlines from NPR at the top of this hour. <br/><br/>The stories you hear are written, reported and fact-checked by NPR journalists.  Learn more about the standards of our journalism at<a href="http://npr.org/ethics"target="_blank"   > npr.org/ethics</a>. <br/><br/>Support public media with NPR+ and enjoy perks for over 25 podcasts like this one. This show’s perks include sponsor-free listening. Learn more at <a href="http://plus.npr.org/"target="_blank"   >plus.npr.org</a>.<br/><br/>See <a href="https://pcm.adswizz.com">pcm.adswizz.com</a> for information about our collection and use of personal data for sponsorship and to manage your podcast sponsorship preferences.<br/><br/><a href="https://www.npr.org/about-npr/179878450/privacy-policy">NPR Privacy Policy</a>]]></content:encoded>
-      <enclosure length="4586728" type="audio/mpeg" url="https://prfx.byspotify.com/e/play.podtrac.com/npr-500005/npr.simplecastaudio.com/368f8510-314e-46f1-8d26-5b87ed6ab6eb/episodes/9281d10d-88d7-4e52-9259-de6a3fc94aad/audio/128/default.mp3?awCollectionId=368f8510-314e-46f1-8d26-5b87ed6ab6eb&amp;awEpisodeId=9281d10d-88d7-4e52-9259-de6a3fc94aad&amp;feed=O9WlY7a5&amp;t=podcast&amp;e=nx-s1-20261105-1000-long&amp;p=500005&amp;d=280&amp;size=4586728"/>
+      <enclosure length="4586728" type="audio/mpeg" url="https://prfx.byspotify.com/e/play.podtrac.com/npr-500005/npr.simplecastaudio.com/368f8510-314e-46f1-8d26-5b87ed6ab6eb/episodes/2d99485b-a49b-43a8-a39b-cfe76e04b337/audio/128/default.mp3?awCollectionId=368f8510-314e-46f1-8d26-5b87ed6ab6eb&amp;awEpisodeId=2d99485b-a49b-43a8-a39b-cfe76e04b337&amp;feed=O9WlY7a5&amp;t=podcast&amp;e=nx-s1-20261105-1600-long&amp;p=500005&amp;d=280&amp;size=4586728"/>
     </item>
     <item>
       <title>NPR News: Trailer</title>
