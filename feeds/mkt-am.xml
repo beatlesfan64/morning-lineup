@@ -26,6 +26,20 @@
     <itunes:category text="Business"/>
     <itunes:category text="News"/>
     <item>
+      <title>What will Democrats scrutinize?</title>
+      <guid isPermaLink="false">01M6NSSD7M56ZHQGGJCKWNFGZ9</guid>
+      <itunes:author>Marketplace</itunes:author>
+      <description>
+        <![CDATA[<p>When Democrats take over the U.S. House and Senate this January, bank oversight will change. The new heads of key congressional committees will have questions for Trump administration regulators and bank CEOs on deregulation and the Consumer Financial Protection Bureau. Later in the show, we visit remote communities in Alaska, where soaring energy costs are becoming increasingly relevant as the state moves into winter.</p><br/><p><em>Every story has an economic angle. Want some in your inbox? </em><em><a href="https://www.marketplace.org/newsletters">Subscribe to our daily or weekly newsletter</a></em><em>.</em></p><br/><p><em>Marketplace Morning Report is more than a radio show. Check out our original reporting and financial literacy content at </em><em><a href="https://www.marketplace.org/">marketplace.org</a></em><em> — and consider </em><em><a href="https://www.marketplace.org/make-a-smart-investment">making an investment</a></em><em> in our future.</em></p><br/><p>Stories from this podcast:</p><br/><ul><li><a href="https://www.marketplace.org/story/2026/11/05/fuel-or-food-in-gasreliant-alaska-high-energy-costs-mean-tough-choices" class="default">High fuel and food prices mean Alaskans may have to choose between the two</a></li></ul>]]>
+      </description>
+      <link>https://www.marketplace.org/episode/2026/11/05/what-will-democrats-scrutinize</link>
+      <enclosure length="3090439" type="audio/mpeg" url="https://pscrb.fm/rss/p/mgln.ai/e/5/dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/VnCzW2iO9G8z4eDWfXCd/play.publicradio.org/podcast/o/marketplace/morning_report/2026/11/05/mmr_20261105_MMR_-_Podcast_1_64.mp3?awCollectionId=mkp-MMR&amp;awEpisodeId=01M6NSSD7M56ZHQGGJCKWNFGZ9"/>
+      <pubDate>Thu, 05 Nov 2026 13:00:00 +0000</pubDate>
+      <itunes:duration>00:06:15</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:image href="https://img.apmcdn.org/c6a5b29400ffc632f43262e28c46b176cd613360/square/1b6238-20261105-u-s-capitol-2000.jpg"/>
+    </item>
+    <item>
       <title>Markets react to the midterms</title>
       <guid isPermaLink="false">01M0ADDXH70F1KVD4VE0RR3JGB</guid>
       <itunes:author>Marketplace</itunes:author>
@@ -94,20 +108,6 @@
       <itunes:duration>00:06:49</itunes:duration>
       <itunes:explicit>false</itunes:explicit>
       <itunes:image href="https://img.apmcdn.org/b8769fe53fa059dd072467321e1d88b4b41a53a9/square/20f493-20261102-the-interior-of-a-gun-store-2000.jpg"/>
-    </item>
-    <item>
-      <title>Will business leaders defend the election outcome?</title>
-      <guid isPermaLink="false">01M6E3TPBCXJA3NC7EYRJKGWTJ</guid>
-      <itunes:author>Marketplace</itunes:author>
-      <description>
-        <![CDATA[<p>With Election Day almost upon us, some business leaders are urging candidates and public officials to respect the voting process and abide by election results. They argue that free and fair elections are essential to a functional economy. This morning, we'll learn what actions the business community is taking. Then, New Hampshire Senator Maggie Hassan joins the program to discuss financial scams and what more federal agencies and private firms can do to prevent them.</p><br/><p><em>Every story has an economic angle. Want some in your inbox? </em><em><a href="https://www.marketplace.org/newsletters">Subscribe to our daily or weekly newsletter</a></em><em>.</em></p><br/><p><em>Marketplace Morning Report is more than a radio show. Check out our original reporting and financial literacy content at </em><em><a href="https://www.marketplace.org/">marketplace.org</a></em><em> — and consider </em><em><a href="https://www.marketplace.org/make-a-smart-investment">making an investment</a></em><em> in our future.</em></p><br/><p>Read the stories in this episode:</p><br/><ul><li><a href="https://www.marketplace.org/story/2026/10/30/how-some-business-leaders-are-prepping-to-defend-election-results" class="default">Some business leaders are ready to defend election officials and the voting process after polls close</a></li><li><a href="https://www.marketplace.org/story/2026/11/02/could-federal-agencies-and-private-firms-do-more-to-prevent-scams" class="default">Sen. Maggie Hassan on financial scams</a></li></ul>]]>
-      </description>
-      <link>https://www.marketplace.org/episode/2026/11/02/will-business-leaders-defend-the-election-outcome</link>
-      <enclosure length="3393878" type="audio/mpeg" url="https://pscrb.fm/rss/p/mgln.ai/e/5/dts.podtrac.com/redirect.mp3/tracking.swap.fm/track/VnCzW2iO9G8z4eDWfXCd/play.publicradio.org/podcast/o/marketplace/morning_report/2026/11/02/mmr_20261102_MMR_-_Podcast_1_64.mp3?awCollectionId=mkp-MMR&amp;awEpisodeId=01M6E3TPBCXJA3NC7EYRJKGWTJ"/>
-      <pubDate>Mon, 02 Nov 2026 12:40:00 +0000</pubDate>
-      <itunes:duration>00:06:53</itunes:duration>
-      <itunes:explicit>false</itunes:explicit>
-      <itunes:image href="https://img.apmcdn.org/59348c179320c827fbce27b81f5e120e2dc1671b/square/09f662-20261102-people-at-voting-booths-2000.jpg"/>
     </item>
 </channel>
 </rss>
