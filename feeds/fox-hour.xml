@@ -30,22 +30,22 @@
       <itunes:category text="Sports News"/>
     </itunes:category>
     <item>
-      <title>1AM ET 11/13/2026 Newscast</title>
-      <description>1AM ET 11/13/2026 Newscast
+      <title>There's a Challenger to Chuck Schumer to Lead Senate Democrats</title>
+      <description>9AM ET 11/13/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Fri, 13 Nov 2026 05:06:00 -0000</pubDate>
+      <pubDate>Fri, 13 Nov 2026 14:19:00 -0000</pubDate>
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:subtitle>1AM ET 11/13/2026 Newscast</itunes:subtitle>
-      <itunes:summary>1AM ET 11/13/2026 Newscast
+      <itunes:subtitle>9AM ET 11/13/2026 Newscast</itunes:subtitle>
+      <itunes:summary>9AM ET 11/13/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
       <content:encoded>
-        <![CDATA[1AM ET 11/13/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+        <![CDATA[9AM ET 11/13/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
       </content:encoded>
       <itunes:duration>313</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[cbe9b512-df28-11f1-8ba1-0be1781d2667]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM1225585696.mp3" length="0" type="audio/mpeg"/>
+      <guid isPermaLink="false"><![CDATA[d678fe1e-df6b-11f1-a07d-e3bc7acec65a]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM9142092732.mp3" length="0" type="audio/mpeg"/>
     </item>
   </channel>
 </rss>
