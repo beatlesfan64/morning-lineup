@@ -8,7 +8,7 @@
     <copyright>2018-2026 CNN</copyright>
     <description>Monday through Friday get up to speed on the biggest headlines of the day with 5 Things. On Saturdays, get a break for your ears with good news from 5 Good Things. And at noon and Sundays, we take you beyond the headlines to help make sense of what everyone is talking about in politics and beyond with One Thing.</description>
     <image>
-      <url>https://megaphone.imgix.net/podcasts/0db83e9e-4758-11ee-9491-57121f88514e/image/1ff583f9440cb17434b6dcbadaf8a075.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress</url>
+      <url>https://megaphone-images.spotifycdn.com/podcasts/0db83e9e-4758-11ee-9491-57121f88514e/image/1ff583f9440cb17434b6dcbadaf8a075.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress</url>
       <title>CNN 5 Things</title>
       <link>https://cnn.com/audio/podcasts/5-things</link>
     </image>
@@ -24,10 +24,44 @@
       <itunes:name>CNN</itunes:name>
       <itunes:email>podcasts@cnn.com</itunes:email>
     </itunes:owner>
-    <itunes:image href="https://megaphone.imgix.net/podcasts/0db83e9e-4758-11ee-9491-57121f88514e/image/1ff583f9440cb17434b6dcbadaf8a075.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
+    <itunes:image href="https://megaphone-images.spotifycdn.com/podcasts/0db83e9e-4758-11ee-9491-57121f88514e/image/1ff583f9440cb17434b6dcbadaf8a075.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
     </itunes:category>
+    <item>
+      <title>Wall Street Welcomes Anthropic</title>
+      <description>As President Donald Trump returns to the US from a China, another round of peace talks are underway in Berlin. Anthropic employees are celebrating the company’s long-awaited IPO. A major IT outage is still sidelining NSA workers - and now disrupting a key intelligence hub. The UN’s top court has issued a historic judgement on atrocities committed against Myanmar’s Rohingya minority. Plus, why the US Army plans to detonate five tons of unstable bomb-making chemicals in Iowa.
+Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
+      <pubDate>Thu, 19 Nov 2026 17:09:00 -0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:author>CNN Podcasts</itunes:author>
+      <itunes:subtitle/>
+      <itunes:summary>As President Donald Trump returns to the US from a China, another round of peace talks are underway in Berlin. Anthropic employees are celebrating the company’s long-awaited IPO. A major IT outage is still sidelining NSA workers - and now disrupting a key intelligence hub. The UN’s top court has issued a historic judgement on atrocities committed against Myanmar’s Rohingya minority. Plus, why the US Army plans to detonate five tons of unstable bomb-making chemicals in Iowa.
+Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
+      <content:encoded>
+        <![CDATA[<p>As President Donald Trump returns to the US from a China, another round of peace talks are underway in Berlin. Anthropic employees are celebrating the company’s long-awaited IPO. A major IT outage is still sidelining NSA workers - and now disrupting a key intelligence hub.<strong> </strong>The UN’s top court has issued a historic judgement on atrocities committed against Myanmar’s Rohingya minority. Plus, why the US Army plans to detonate five tons of unstable bomb-making chemicals in Iowa.</p><p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+      </content:encoded>
+      <itunes:duration>496</itunes:duration>
+      <guid isPermaLink="false"><![CDATA[a5e4b1ec-b04d-11f0-b754-dba19bfa2eaf]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/swap.fm/track/2nzGkisFXQswLYT5s325/traffic.megaphone.fm/WMHY5532437273.mp3" length="0" type="audio/mpeg"/>
+    </item>
+    <item>
+      <title>Trump's Historic Talks with Putin, Xi</title>
+      <description>Trump touts close relationships with Xi, Putin at historic talks. Anthropic's record-breaking IPO. Storm systems causing flooding in CA and FL could impact Thanksgiving travel. Jeffries wins speaker vote as Dems put Trump officials and family members on notice. And say goodbye to the gamers in your life as Grand Theft Auto VI just went live.&amp;nbsp;
+Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
+      <pubDate>Thu, 19 Nov 2026 12:04:00 -0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:author>CNN Podcasts</itunes:author>
+      <itunes:subtitle/>
+      <itunes:summary>Trump touts close relationships with Xi, Putin at historic talks. Anthropic's record-breaking IPO. Storm systems causing flooding in CA and FL could impact Thanksgiving travel. Jeffries wins speaker vote as Dems put Trump officials and family members on notice. And say goodbye to the gamers in your life as Grand Theft Auto VI just went live.&amp;nbsp;
+Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
+      <content:encoded>
+        <![CDATA[<p>Trump touts close relationships with Xi, Putin at historic talks. Anthropic's record-breaking IPO. Storm systems causing flooding in CA and FL could impact Thanksgiving travel. Jeffries wins speaker vote as Dems put Trump officials and family members on notice. And say goodbye to the gamers in your life as Grand Theft Auto VI just went live.&nbsp;</p><p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+      </content:encoded>
+      <itunes:duration>572</itunes:duration>
+      <guid isPermaLink="false"><![CDATA[0076221c-b04e-11f0-adaa-7ff0f39fa941]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/swap.fm/track/2nzGkisFXQswLYT5s325/traffic.megaphone.fm/WMHY9834104166.mp3" length="0" type="audio/mpeg"/>
+    </item>
     <item>
       <title>Officials Face Questions on Global Threats</title>
       <description>Lawmakers grilled top Trump administration officials on recent tech outages. House Democrats nominated Hakeem Jeffries for speaker despite threats from incoming progressives. US envoys Steve Witkoff and Jared Kushner head to Germany for another round of Ukraine peace talks. Anthropic’s Wall Street debut tomorrow marks a new chapter for AI. Plus, NASA’s spacecraft just made history again.
@@ -95,40 +129,6 @@ Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:sum
       <itunes:duration>454</itunes:duration>
       <guid isPermaLink="false"><![CDATA[5a5204be-b04d-11f0-a7a7-5befe2b72230]]></guid>
       <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/swap.fm/track/2nzGkisFXQswLYT5s325/traffic.megaphone.fm/WMHY4519207916.mp3" length="0" type="audio/mpeg"/>
-    </item>
-    <item>
-      <title>Trump’s Asia Tour Begins</title>
-      <description>President Donald Trump kicks off his Asia trip in the Philippines, signing trade papers with Thailand that stops short of a full deal. Meanwhile, Trump warns Iran would pay a major price if it carried out an attack on the nation’s capital. Several people are injured after severe turbulence on a flight headed to Florida. Massive attacks between Russia and Ukraine have damaged major bridges. Plus, Pizza Hut’s last surviving co-founder has died.
-Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Tue, 17 Nov 2026 16:46:00 -0000</pubDate>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:author>CNN Podcasts</itunes:author>
-      <itunes:subtitle/>
-      <itunes:summary>President Donald Trump kicks off his Asia trip in the Philippines, signing trade papers with Thailand that stops short of a full deal. Meanwhile, Trump warns Iran would pay a major price if it carried out an attack on the nation’s capital. Several people are injured after severe turbulence on a flight headed to Florida. Massive attacks between Russia and Ukraine have damaged major bridges. Plus, Pizza Hut’s last surviving co-founder has died.
-Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
-      <content:encoded>
-        <![CDATA[<p>President Donald Trump kicks off his Asia trip in the Philippines, signing trade papers with Thailand that stops short of a full deal. Meanwhile, Trump warns Iran would pay a major price if it carried out an attack on the nation’s capital. Several people are injured after severe turbulence on a flight headed to Florida. Massive attacks between Russia and Ukraine have damaged major bridges. Plus, Pizza Hut’s last surviving co-founder has died.</p><p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
-      </content:encoded>
-      <itunes:duration>451</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[a513baba-b04d-11f0-b754-3b682007a723]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/swap.fm/track/2nzGkisFXQswLYT5s325/traffic.megaphone.fm/WMHY6869867146.mp3" length="0" type="audio/mpeg"/>
-    </item>
-    <item>
-      <title>Sources: US Intel Concerned Iran is Plotting to Use Dirty Bomb in DC </title>
-      <description>Sources: US intel concerned Iran is plotting to use dirty bomb in DC. Trump administration works to reassure public after United outage and bank glitches add to week of technical failures.  US tightens export restrictions on AI chips as Trump arrives in Asia. We have a new Bond, but who's the favorite to sing the theme? 
-Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Tue, 17 Nov 2026 12:05:00 -0000</pubDate>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:author>CNN Podcasts</itunes:author>
-      <itunes:subtitle/>
-      <itunes:summary>Sources: US intel concerned Iran is plotting to use dirty bomb in DC. Trump administration works to reassure public after United outage and bank glitches add to week of technical failures.  US tightens export restrictions on AI chips as Trump arrives in Asia. We have a new Bond, but who's the favorite to sing the theme? 
-Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
-      <content:encoded>
-        <![CDATA[<p>Sources: US intel concerned Iran is plotting to use dirty bomb in DC. Trump administration works to reassure public after United outage and bank glitches add to week of technical failures.  US tightens export restrictions on AI chips as Trump arrives in Asia. We have a new Bond, but who's the favorite to sing the theme? </p><p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
-      </content:encoded>
-      <itunes:duration>526</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[fff82128-b04d-11f0-adaa-53f7816443d9]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/swap.fm/track/2nzGkisFXQswLYT5s325/traffic.megaphone.fm/WMHY4838920289.mp3" length="0" type="audio/mpeg"/>
     </item>
 </channel>
 </rss>
