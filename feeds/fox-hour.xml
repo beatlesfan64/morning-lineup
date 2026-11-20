@@ -30,22 +30,22 @@
       <itunes:category text="Sports News"/>
     </itunes:category>
     <item>
-      <title>4AM ET 11/20/2026 Newscast</title>
-      <description>4AM ET 11/20/2026 Newscast
+      <title>President Trump calls his recent visit to Asia a major success.</title>
+      <description>1PM ET 11/20/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Fri, 20 Nov 2026 08:06:00 -0000</pubDate>
+      <pubDate>Fri, 20 Nov 2026 17:06:00 -0000</pubDate>
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:subtitle>4AM ET 11/20/2026 Newscast</itunes:subtitle>
-      <itunes:summary>4AM ET 11/20/2026 Newscast
+      <itunes:subtitle>1PM ET 11/20/2026 Newscast</itunes:subtitle>
+      <itunes:summary>1PM ET 11/20/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
       <content:encoded>
-        <![CDATA[4AM ET 11/20/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+        <![CDATA[1PM ET 11/20/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
       </content:encoded>
       <itunes:duration>313</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[15d452d8-e4c2-11f1-af89-5f1ca02128c0]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM3331249072.mp3" length="0" type="audio/mpeg"/>
+      <guid isPermaLink="false"><![CDATA[89ab1cc8-e50d-11f1-8612-675229799fcb]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM6853667744.mp3" length="0" type="audio/mpeg"/>
     </item>
   </channel>
 </rss>
