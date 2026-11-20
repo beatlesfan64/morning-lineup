@@ -8,7 +8,7 @@
     <copyright>2026 Fox News Network, LLC</copyright>
     <description>The FOX News Rundown&amp;nbsp;is your daily news podcast for making sense of the big issues directly impacting your life. Go beyond the headlines every morning and join some of FOX News’ most exceptional journalists—including FOX News Channel reporters Peter Doocy, Aishah Hasnie, Bill Melugin, Alex Hogan, Lucas Tomlinson and Jacqui Heinrich and FOX News Radio reporters Dave Anthony, Jessica Rosenthal, Lisa Brady, and Gurnal Scott - as they tap into the global reporting resources of FOX News and get unparalleled political analysis and exclusive insight from top newsmakers. The Rundown offers a sharp contrast of perspectives you won’t hear anywhere else, and a daily commentary you can't miss, we deliver the full picture of the day's biggest events.</description>
     <image>
-      <url>https://megaphone.imgix.net/podcasts/64a96b1e-7938-11ec-b16c-2bd90dc64bad/image/35d94d3527bb2ef614f0f5572bb97c1d.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress</url>
+      <url>https://megaphone-images.spotifycdn.com/podcasts/64a96b1e-7938-11ec-b16c-2bd90dc64bad/image/35d94d3527bb2ef614f0f5572bb97c1d.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress</url>
       <title>The Fox News Rundown</title>
       <link>https://radio.foxnews.com/podcast/fox-news-rundown/</link>
     </image>
@@ -26,11 +26,48 @@
       <itunes:name>FOX News Podcasts</itunes:name>
       <itunes:email>podcasts@fox.com </itunes:email>
     </itunes:owner>
-    <itunes:image href="https://megaphone.imgix.net/podcasts/64a96b1e-7938-11ec-b16c-2bd90dc64bad/image/35d94d3527bb2ef614f0f5572bb97c1d.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
+    <itunes:image href="https://megaphone-images.spotifycdn.com/podcasts/64a96b1e-7938-11ec-b16c-2bd90dc64bad/image/35d94d3527bb2ef614f0f5572bb97c1d.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
     <itunes:category text="News">
       <itunes:category text="Politics"/>
       <itunes:category text="Daily News"/>
     </itunes:category>
+    <item>
+      <title>President Trump's Historic Talks With Xi and Putin  </title>
+      <description>President Trump returning from China where he met with Xi Jinping and Russian President Vladimir Putin. The leaders agreed to increase the production and supply of refined petroleum products while reaffirming the importance of stable energy flows. President Trump says he was very happy the historic trilateral with the world's biggest nuclear powers, What wasn't spoken about was Nvidia CEO Jensen Huang’s affair with an alleged Chinese spy.  
+
+
+
+FOX's Eben Brown speaks with Gordon Chang, China expert and best selling author of ‘Plan Red: China’s Project to Destroy America’ … and he has a new book coming out in March of next year (2027), ‘Apocalypse: The Coming Nuclear War’, who says its always good to have open lines of communication with adversaries but in terms of China, we need a different kind of strategy.  
+
+
+Click here to Follow the FOX News Rundown: Evening Edition: https://link.podtrac.com/fnr_podeve
+Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
+      <pubDate>Thu, 19 Nov 2026 23:00:00 -0000</pubDate>
+      <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:author>FOX News Podcasts</itunes:author>
+      <itunes:image href="https://megaphone-images.spotifycdn.com/podcasts/395237d4-89dc-11f1-a0b9-db07cb557a99/image/3f8347ff2eb32d9c35ccb52c3b933dc7.jpeg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
+      <itunes:subtitle/>
+      <itunes:summary>President Trump returning from China where he met with Xi Jinping and Russian President Vladimir Putin. The leaders agreed to increase the production and supply of refined petroleum products while reaffirming the importance of stable energy flows. President Trump says he was very happy the historic trilateral with the world's biggest nuclear powers, What wasn't spoken about was Nvidia CEO Jensen Huang’s affair with an alleged Chinese spy.  
+
+
+
+FOX's Eben Brown speaks with Gordon Chang, China expert and best selling author of ‘Plan Red: China’s Project to Destroy America’ … and he has a new book coming out in March of next year (2027), ‘Apocalypse: The Coming Nuclear War’, who says its always good to have open lines of communication with adversaries but in terms of China, we need a different kind of strategy.  
+
+
+Click here to Follow the FOX News Rundown: Evening Edition: https://link.podtrac.com/fnr_podeve
+Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
+      <content:encoded>
+        <![CDATA[<p>President Trump returning from China where he met with Xi Jinping and Russian President Vladimir Putin. The leaders agreed to increase the production and supply of refined petroleum products while reaffirming the importance of stable energy flows. President Trump says he was very happy the historic trilateral with the world's biggest nuclear powers, What wasn't spoken about was Nvidia CEO Jensen Huang’s affair with an alleged Chinese spy.  </p>
+<p><br></p>
+<p>FOX's Eben Brown speaks with Gordon Chang, China expert and best selling author of<em> ‘Plan Red: China’s Project to Destroy America’</em> … and he has a new book coming out in March of next year (2027),<em> ‘Apocalypse: The Coming Nuclear War’,</em> who says its always good to have open lines of communication with adversaries but in terms of China, we need a different kind of strategy.  </p>
+<p>
+Click here to Follow the FOX News Rundown: Evening Edition: <a href="https://link.podtrac.com/fnr_podeve">https://link.podtrac.com/fnr_podeve</a></p><p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+      </content:encoded>
+      <itunes:duration>1208</itunes:duration>
+      <guid isPermaLink="false"><![CDATA[395237d4-89dc-11f1-a0b9-db07cb557a99]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM2765956146.mp3" length="0" type="audio/mpeg"/>
+    </item>
     <item>
       <title>Is America Ready For AI Attacks?</title>
       <description>After a string of major tech outages that disrupted airlines, banks, and even Microsoft, Washington faces one urgent question: are these cascading outages just rushed maintenance, or a warning sign of AI accelerated cyber warfare?&amp;nbsp; Former acting CISA Director, President of Via Stella LLC, and Heritage Foundation Visiting Fellow Bridget Bean discusses the critical staffing shortages facing our top cyber defense agency, how nation-state adversaries like Iran and China are weaponizing AI tools to infiltrate critical infrastructure, and why securing America’s aging power and water grids requires harnessing AI on defense before it’s too late.
@@ -50,7 +87,7 @@ Learn more about your ad choices. Visit podcastchoices.com/adchoices</descriptio
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:image href="https://megaphone.imgix.net/podcasts/f05508fc-e3ba-11f1-8a59-238bc1053f60/image/b9f1628e57bc2bfece4b59f71203f696.png?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
+      <itunes:image href="https://megaphone-images.spotifycdn.com/podcasts/f05508fc-e3ba-11f1-8a59-238bc1053f60/image/b9f1628e57bc2bfece4b59f71203f696.png?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
       <itunes:subtitle></itunes:subtitle>
       <itunes:summary>After a string of major tech outages that disrupted airlines, banks, and even Microsoft, Washington faces one urgent question: are these cascading outages just rushed maintenance, or a warning sign of AI accelerated cyber warfare?&amp;nbsp; Former acting CISA Director, President of Via Stella LLC, and Heritage Foundation Visiting Fellow Bridget Bean discusses the critical staffing shortages facing our top cyber defense agency, how nation-state adversaries like Iran and China are weaponizing AI tools to infiltrate critical infrastructure, and why securing America’s aging power and water grids requires harnessing AI on defense before it’s too late.
 
@@ -93,7 +130,7 @@ Learn more about your ad choices. Visit podcastchoices.com/adchoices</descriptio
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:image href="https://megaphone.imgix.net/podcasts/33b7445e-89dc-11f1-a0b9-cb7a993a86de/image/18af6310b685c1b1be7b675ea2411674.jpeg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
+      <itunes:image href="https://megaphone-images.spotifycdn.com/podcasts/33b7445e-89dc-11f1-a0b9-cb7a993a86de/image/18af6310b685c1b1be7b675ea2411674.jpeg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
       <itunes:subtitle/>
       <itunes:summary>A new threat report describes the possibility of Iran developing plans for a "dirty bomb" attack on Washington, D.C., drawing a warning from President Trump that there would be overwhelming retaliation from the United States. A dirty bomb is a combination of conventional explosives with radioactive or biological material that would spread contamination without producing a nuclear explosion. This has been eyed as a potential attack for years now but experts do say that Iran could make a dirty bomb, but would need someone inside the United States with the level of expertise to handle the materials and carry out an attack
 
@@ -136,7 +173,7 @@ Learn more about your ad choices. Visit podcastchoices.com/adchoices</descriptio
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:image href="https://megaphone.imgix.net/podcasts/372168a4-89dc-11f1-a0b9-f36bdf5d2422/image/07d975f5c076060a072abc2a49a3e5c0.png?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
+      <itunes:image href="https://megaphone-images.spotifycdn.com/podcasts/372168a4-89dc-11f1-a0b9-f36bdf5d2422/image/07d975f5c076060a072abc2a49a3e5c0.png?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
       <itunes:subtitle/>
       <itunes:summary>After a week of widespread tech outages and glitches disrupting airlines, banks, and major software systems, concerns are growing over America’s aging infrastructure and national vulnerabilities. The Story host and executive editor Martha MacCallum joins to discuss what the recent disruptions reveal about systemic weak spots, explain why a growing wave of unaligned voters is upending traditional party politics, and share the inspiring first-person stories of everyday and military heroism featured in her new book, The Book of Valor.
 
@@ -182,7 +219,7 @@ Learn more about your ad choices. Visit podcastchoices.com/adchoices</descriptio
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:image href="https://megaphone.imgix.net/podcasts/d0da5060-89db-11f1-9ad9-8f0e0dcae251/image/8c23193a9d0f49fbf908e07ee4193733.jpeg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
+      <itunes:image href="https://megaphone-images.spotifycdn.com/podcasts/d0da5060-89db-11f1-9ad9-8f0e0dcae251/image/8c23193a9d0f49fbf908e07ee4193733.jpeg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
       <itunes:subtitle/>
       <itunes:summary>Rockstar Games will officially be launching Grand Theft Auto VI this week, ending a 13-year wait since the previous main installment. Relationships will be tested, marriages and jobs could be lost as players are rabid, signing contracts with their spouses and taking full weeks off from work to play. The blockbuster action-adventure title unlocks on PlayStation 5 and Xbox Series X|S, returning players to the neon-soaked streets of Vice City and the wider state of Leonida. 
 
@@ -218,7 +255,7 @@ Learn more about your ad choices. Visit podcastchoices.com/adchoices</descriptio
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:image href="https://megaphone.imgix.net/podcasts/37ef215e-89dc-11f1-a0b9-b73ee59f33aa/image/98d58fc6a1403144b26491ccd464e8d9.png?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
+      <itunes:image href="https://megaphone-images.spotifycdn.com/podcasts/37ef215e-89dc-11f1-a0b9-b73ee59f33aa/image/98d58fc6a1403144b26491ccd464e8d9.png?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
       <itunes:subtitle/>
       <itunes:summary>California Governor Gavin Newsom has commuted the death sentences of more than 500 inmates, effectively dismantling the state’s death row just days after the midterm elections. Former federal prosecutor and longtime DOJ Capital Review Committee leader Jim Trusty joins the Rundown to examine the legal and political fallout, including the impact on victims’ families and how Newsom’s move is just the latest in the effort to “kill” the death penalty in America.
 
@@ -238,43 +275,6 @@ Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:sum
       <itunes:duration>2073</itunes:duration>
       <guid isPermaLink="false"><![CDATA[37ef215e-89dc-11f1-a0b9-b73ee59f33aa]]></guid>
       <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM1675867079.mp3" length="0" type="audio/mpeg"/>
-    </item>
-    <item>
-      <title>Questions Swirl Around NVIDIA as President Trump Heads to Asia   </title>
-      <description>President Trump has  left for Asia but the questions surrounding Nvidia and how its chips ended up in China are sure to follow him as he prepares to meet with Chinese leader Xi Jinping later this week. Commerce Secretary Howard Lutnick is said to be joining the president on the trip, who is facing pressure from lawmakers and within the administration about why his department didn’t more aggressively clamp down on Nvidia chip exports and why the Singapore-based data center builder Megaspeed wasn’t blacklisted.  
-
-
-
-FOX's Eben Brown speaks with Max Meizlish, the deputy director of the Center on Economic and Financial Power (CEFP) at the Foundation for Defense of Democracies (FDD), who says the United States has all the tools to apply pressure on China and should not be afraid to use them.   
-
-
-Click here to Follow the FOX News Rundown: Evening Edition: https://link.podtrac.com/fnr_podeve
-Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Mon, 16 Nov 2026 23:00:00 -0000</pubDate>
-      <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:image href="https://megaphone.imgix.net/podcasts/cf00ecea-89db-11f1-9ad9-87a30d92db1a/image/731c033181d38d6c71b5f13738812ff5.jpeg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
-      <itunes:subtitle/>
-      <itunes:summary>President Trump has  left for Asia but the questions surrounding Nvidia and how its chips ended up in China are sure to follow him as he prepares to meet with Chinese leader Xi Jinping later this week. Commerce Secretary Howard Lutnick is said to be joining the president on the trip, who is facing pressure from lawmakers and within the administration about why his department didn’t more aggressively clamp down on Nvidia chip exports and why the Singapore-based data center builder Megaspeed wasn’t blacklisted.  
-
-
-
-FOX's Eben Brown speaks with Max Meizlish, the deputy director of the Center on Economic and Financial Power (CEFP) at the Foundation for Defense of Democracies (FDD), who says the United States has all the tools to apply pressure on China and should not be afraid to use them.   
-
-
-Click here to Follow the FOX News Rundown: Evening Edition: https://link.podtrac.com/fnr_podeve
-Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
-      <content:encoded>
-        <![CDATA[<p>President Trump has  left for Asia but the questions surrounding Nvidia and how its chips ended up in China are sure to follow him as he prepares to meet with Chinese leader Xi Jinping later this week. Commerce Secretary Howard Lutnick is said to be joining the president on the trip, who is facing pressure from lawmakers and within the administration about why his department didn’t more aggressively clamp down on Nvidia chip exports and why the Singapore-based data center builder Megaspeed wasn’t blacklisted.  </p>
-<p><br></p>
-<p>FOX's Eben Brown speaks with Max Meizlish, the deputy director of the Center on Economic and Financial Power (CEFP) at the Foundation for Defense of Democracies (FDD), who says the United States has all the tools to apply pressure on China and should not be afraid to use them.   </p>
-<p>
-Click here to Follow the FOX News Rundown: Evening Edition: <a href="https://link.podtrac.com/fnr_podeve">https://link.podtrac.com/fnr_podeve</a></p><p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
-      </content:encoded>
-      <itunes:duration>992</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[cf00ecea-89db-11f1-9ad9-87a30d92db1a]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM7120281646.mp3" length="0" type="audio/mpeg"/>
     </item>
 </channel>
 </rss>

@@ -8,7 +8,7 @@
     <copyright>2022 Fox News Network, LLC</copyright>
     <description>The latest news from the fastest growing radio news network, FOX News Radio. Listen to the power of FOX News on radio! Updated hourly!</description>
     <image>
-      <url>https://megaphone.imgix.net/podcasts/34e4744e-0b35-11ec-9752-eb760e0dd74c/image/hourlynews.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress</url>
+      <url>https://megaphone-images.spotifycdn.com/podcasts/34e4744e-0b35-11ec-9752-eb760e0dd74c/image/hourlynews.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress</url>
       <title>Fox News Hourly Update</title>
       <link>https://radio.foxnews.com/podcast/5-minute-newscast/</link>
     </image>
@@ -24,28 +24,28 @@
       <itunes:name>FOX News Podcasts</itunes:name>
       <itunes:email>podcasts@fox.com </itunes:email>
     </itunes:owner>
-    <itunes:image href="https://megaphone.imgix.net/podcasts/34e4744e-0b35-11ec-9752-eb760e0dd74c/image/hourlynews.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
+    <itunes:image href="https://megaphone-images.spotifycdn.com/podcasts/34e4744e-0b35-11ec-9752-eb760e0dd74c/image/hourlynews.jpg?ixlib=rails-4.3.1&amp;max-w=3000&amp;max-h=3000&amp;fit=crop&amp;auto=format,compress"/>
     <itunes:category text="News">
       <itunes:category text="Daily News"/>
       <itunes:category text="Sports News"/>
     </itunes:category>
     <item>
-      <title>1PM ET 11/19/2026 Newscast</title>
-      <description>1PM ET 11/19/2026 Newscast
+      <title>7PM ET 11/19/2026 Newscast</title>
+      <description>7PM ET 11/19/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Thu, 19 Nov 2026 17:06:00 -0000</pubDate>
+      <pubDate>Thu, 19 Nov 2026 23:06:00 -0000</pubDate>
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:subtitle>1PM ET 11/19/2026 Newscast</itunes:subtitle>
-      <itunes:summary>1PM ET 11/19/2026 Newscast
+      <itunes:subtitle>7PM ET 11/19/2026 Newscast</itunes:subtitle>
+      <itunes:summary>7PM ET 11/19/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
       <content:encoded>
-        <![CDATA[1PM ET 11/19/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+        <![CDATA[7PM ET 11/19/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
       </content:encoded>
       <itunes:duration>313</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[5e8f4a1a-e444-11f1-b14c-2b789765b91d]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM7164708852.mp3" length="0" type="audio/mpeg"/>
+      <guid isPermaLink="false"><![CDATA[a9fbac78-e476-11f1-815d-af0433d7e82d]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM1279220015.mp3" length="0" type="audio/mpeg"/>
     </item>
   </channel>
 </rss>
