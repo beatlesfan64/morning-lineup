@@ -29,10 +29,27 @@
       <itunes:category text="Daily News"/>
     </itunes:category>
     <item>
+      <title>Wall Street’s AI Wipeout</title>
+      <description>President Donald Trump talks the war in Iran, GOP midterm losses and more during a lengthy news conference. A developing storm is threatening Thanksgiving travel. Trump’s plans for a proposed triumphal arch continue to face legal setbacks. Tech stocks take another beating. And, Gen Z protesters hit the streets across Europe.
+Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
+      <pubDate>Fri, 20 Nov 2026 22:11:00 -0000</pubDate>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:author>CNN Podcasts</itunes:author>
+      <itunes:subtitle/>
+      <itunes:summary>President Donald Trump talks the war in Iran, GOP midterm losses and more during a lengthy news conference. A developing storm is threatening Thanksgiving travel. Trump’s plans for a proposed triumphal arch continue to face legal setbacks. Tech stocks take another beating. And, Gen Z protesters hit the streets across Europe.
+Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
+      <content:encoded>
+        <![CDATA[<p>President Donald Trump talks the war in Iran, GOP midterm losses and more during a lengthy news conference. A developing storm is threatening Thanksgiving travel. Trump’s plans for a proposed triumphal arch continue to face legal setbacks. Tech stocks take another beating. And, Gen Z protesters hit the streets across Europe.</p><p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+      </content:encoded>
+      <itunes:duration>420</itunes:duration>
+      <guid isPermaLink="false"><![CDATA[5b25b624-b04d-11f0-a7a7-4f1ddb478f16]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/swap.fm/track/2nzGkisFXQswLYT5s325/traffic.megaphone.fm/WMHY3912534144.mp3" length="0" type="audio/mpeg"/>
+    </item>
+    <item>
       <title>NSA Resolves Major Network Outage</title>
       <description>A classified internal communications network is back online after nearly four days. Democrats may be gearing up for a legal showdown against the Trump administration over fears of destroyed documents. Russia launched a massive wave of deadly strikes on Ukraine hours after historic trilateral talks. The timeline to close New York City’s notorious Rikers Island jail is getting pushed back. Plus, Anthropic’s staff hit a massive payday.
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Fri, 20 Nov 2026 17:14:00 -0000</pubDate>
+      <pubDate>Fri, 20 Nov 2026 18:47:00 -0000</pubDate>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>CNN Podcasts</itunes:author>
       <itunes:subtitle/>
@@ -112,23 +129,6 @@ Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:sum
       <itunes:duration>572</itunes:duration>
       <guid isPermaLink="false"><![CDATA[0076221c-b04e-11f0-adaa-7ff0f39fa941]]></guid>
       <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/swap.fm/track/2nzGkisFXQswLYT5s325/traffic.megaphone.fm/WMHY9834104166.mp3" length="0" type="audio/mpeg"/>
-    </item>
-    <item>
-      <title>Officials Face Questions on Global Threats</title>
-      <description>Lawmakers grilled top Trump administration officials on recent tech outages. House Democrats nominated Hakeem Jeffries for speaker despite threats from incoming progressives. US envoys Steve Witkoff and Jared Kushner head to Germany for another round of Ukraine peace talks. Anthropic’s Wall Street debut tomorrow marks a new chapter for AI. Plus, NASA’s spacecraft just made history again.
-Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Wed, 18 Nov 2026 21:53:00 -0000</pubDate>
-      <itunes:episodeType>full</itunes:episodeType>
-      <itunes:author>CNN Podcasts</itunes:author>
-      <itunes:subtitle/>
-      <itunes:summary>Lawmakers grilled top Trump administration officials on recent tech outages. House Democrats nominated Hakeem Jeffries for speaker despite threats from incoming progressives. US envoys Steve Witkoff and Jared Kushner head to Germany for another round of Ukraine peace talks. Anthropic’s Wall Street debut tomorrow marks a new chapter for AI. Plus, NASA’s spacecraft just made history again.
-Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
-      <content:encoded>
-        <![CDATA[<p>Lawmakers grilled top Trump administration officials on recent tech outages. House Democrats nominated Hakeem Jeffries for speaker despite threats from incoming progressives. US envoys Steve Witkoff and Jared Kushner head to Germany for another round of Ukraine peace talks. Anthropic’s Wall Street debut tomorrow marks a new chapter for AI. Plus, NASA’s spacecraft just made history again.</p><p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
-      </content:encoded>
-      <itunes:duration>482</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[2a6f6466-af7c-11f0-9be7-132a0c13da4d]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/swap.fm/track/2nzGkisFXQswLYT5s325/traffic.megaphone.fm/WMHY1631742496.mp3" length="0" type="audio/mpeg"/>
     </item>
 </channel>
 </rss>
