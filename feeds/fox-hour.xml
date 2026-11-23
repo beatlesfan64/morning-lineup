@@ -30,22 +30,22 @@
       <itunes:category text="Sports News"/>
     </itunes:category>
     <item>
-      <title>2PM ET 11/23/2026 Newscast</title>
-      <description>2PM ET 11/23/2026 Newscast
+      <title>4PM ET 11/23/2026 Newscast</title>
+      <description>4PM ET 11/23/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</description>
-      <pubDate>Mon, 23 Nov 2026 18:06:00 -0000</pubDate>
+      <pubDate>Mon, 23 Nov 2026 20:06:00 -0000</pubDate>
       <media:restriction relationship="deny" type="country">AT BE BG HR CY CZ DK EE FI FR DE GR HU IE IT LV LT LU MT NL PL PT RO SK SI ES SE GB CN RU BR NK IR CU VE SY</media:restriction>
       <itunes:episodeType>full</itunes:episodeType>
       <itunes:author>FOX News Podcasts</itunes:author>
-      <itunes:subtitle>2PM ET 11/23/2026 Newscast</itunes:subtitle>
-      <itunes:summary>2PM ET 11/23/2026 Newscast
+      <itunes:subtitle>4PM ET 11/23/2026 Newscast</itunes:subtitle>
+      <itunes:summary>4PM ET 11/23/2026 Newscast
 Learn more about your ad choices. Visit podcastchoices.com/adchoices</itunes:summary>
       <content:encoded>
-        <![CDATA[2PM ET 11/23/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
+        <![CDATA[4PM ET 11/23/2026 Newscast<p> </p><p>Learn more about your ad choices. Visit <a href="https://podcastchoices.com/adchoices">podcastchoices.com/adchoices</a></p>]]>
       </content:encoded>
-      <itunes:duration>314</itunes:duration>
-      <guid isPermaLink="false"><![CDATA[6a2b29b8-e771-11f1-9aa5-efcc31d54d04]]></guid>
-      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM7405166830.mp3" length="0" type="audio/mpeg"/>
+      <itunes:duration>313</itunes:duration>
+      <guid isPermaLink="false"><![CDATA[2aabc336-e782-11f1-99c2-036d95cf8472]]></guid>
+      <enclosure url="https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/traffic.megaphone.fm/FOXM6010992699.mp3" length="0" type="audio/mpeg"/>
     </item>
   </channel>
 </rss>
